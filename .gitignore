@@ -1,0 +1,8 @@
+# Original brief (kept locally, not part of the repository)
+gemini-code-*.txt
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/

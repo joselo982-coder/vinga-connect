@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#FAF6EE">
 <meta name="description" content="Vinga Connect – interaktiv prototyp för Vinga Folkhögskola, Frihamnen 15, Göteborg. SJU Solutions.">
 <title>Vinga Connect</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23fff%22/%3E%3Cg%20transform%3D%22translate%28-46.00%2013.59%29%20scale%280.4602%29%22%3E%3Cpath%20d%3D%22M113%2018L171%2030L171%2033L124%2068L122%2066L122%2058L151%2035L115%2028Z%22%20fill%3D%22%23003861%22/%3E%3Cpath%20d%3D%22M214%2012L217%2019L217%2021L188%2044L224%2052L226%2052L226%2061L221%2061L168%2049L168%2047Z%22%20fill%3D%22%23A3D7D6%22/%3E%3C/g%3E%3C/svg%3E">
 <style>
 /* Vinga Connect — playful EdTech look (reference: rounded colour blocks, pill controls, big bold numbers)
    Each tab owns a colour: Puls pink · Studier mustard · Guide teal · Profil lavender.
@@ -17,7 +18,7 @@
  --teal:#3B8674;--teal-ink:#2C6658;--teal-soft:#DCEEE7;
  --lilac:#A7A3F0;--lilac-ink:#3E3A8C;--lilac-soft:#ECEBFD;
  --orange:#F6A35B;--orange-soft:#FDE7D3;
- --navy:#114472;--navy-deep:#0C3459;--cyan:#BCE3E4;
+ --navy:#003861;--navy-deep:#00284A;--cyan:#A3D7D6;
  --cream:#FAF6EE;--paper:#FFFFFF;--line:#EEE5D3;
  --night:#1F1E24;--ink:#1F1E24;--muted:#67656F;
  --coral:var(--pink);--mint:var(--teal);--mint-soft:var(--teal-soft);
@@ -66,16 +67,10 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 @keyframes flipIn{from{opacity:0;transform:perspective(500px) rotateX(-80deg)}to{opacity:1;transform:none}}
 
 /* ---------- Logo ---------- */
-.brand{display:inline-flex;align-items:center;gap:8px;direction:ltr}
+.brand{display:inline-flex;align-items:center;direction:ltr}
 .mark svg{display:block;width:100%;height:100%}
-.brand .mark{width:36px;height:27px}
-.wm{display:flex;flex-direction:column;align-items:center;line-height:1;color:var(--navy);font-family:var(--text)}
-.wm b{font-size:16px;font-weight:900;letter-spacing:.34em;margin-right:-.34em}
-.wm small{font-size:6px;font-weight:800;letter-spacing:.14em;border-top:1px solid currentColor;border-bottom:1px solid currentColor;padding:2px 0 1.5px;margin-top:3px;white-space:nowrap}
-.brand.big{flex-direction:column;gap:12px}
-.brand.big .mark{width:96px;height:72px}
-.brand.big .wm b{font-size:32px}
-.brand.big .wm small{font-size:10.5px;padding:4px 0 3px;margin-top:6px}
+.logo-full{display:block;width:100%;height:auto}
+.brand.big{display:block;width:210px;margin:0 auto}
 
 /* ---------- Login ---------- */
 .login{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain}
@@ -124,7 +119,7 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 .hdr-t{min-width:0;flex:1}
 .hdr-t b{display:block;font-family:var(--display);font-weight:800;font-size:19px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .hdr-t small{display:block;font-size:13px;opacity:.85}
-.hdr-mark{width:42px;height:42px;border-radius:50%;background:#fff;display:grid;place-items:center;padding:9px 7px;flex:none}
+.hdr-mark{width:42px;height:42px;border-radius:50%;background:#fff;display:grid;place-items:center;padding:11px 6px;flex:none}
 .hdr-mark svg{width:100%;height:auto;display:block}
 .iconbtn{height:42px;min-width:42px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.6);color:var(--night);display:inline-flex;align-items:center;justify-content:center;gap:6px;font-weight:800;font-size:13.5px}
 .iconbtn svg{width:18px;height:18px}
@@ -363,10 +358,7 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 /* ---------- Profil ---------- */
 .sk{position:relative;border-radius:28px;padding:18px;color:#fff;background:linear-gradient(118deg,var(--navy-deep) 0 57%,var(--navy) 57% 100%);overflow:hidden;margin-bottom:12px}
 .sk-top{display:flex;align-items:center;justify-content:space-between;position:relative}
-.sk-logo{background:#fff;border-radius:999px;padding:7px 14px}
-.sk-logo .mark{width:30px;height:22px}
-.sk-logo .wm b{font-size:13px}
-.sk-logo .wm small{font-size:5px}
+.sk-logo{background:#fff;border-radius:14px;padding:7px 10px;width:96px}
 .sk-year{text-align:end;font-size:13px;font-weight:600;color:var(--cyan);line-height:1.3}
 .sk-year b{font-family:var(--display);font-weight:800;font-size:19px;color:#fff}
 .sk-mid{display:flex;align-items:center;gap:14px;margin:18px 0 14px;position:relative}
@@ -693,7 +685,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .onb-body{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:12px;padding:4px 2px 12px;animation:slideIn .35s var(--ease)}
 .onb h2{font-size:27px;text-align:center}
 .onb .d{text-align:center;color:var(--muted);font-size:15.5px}
-.onb .brand.big{margin:4px auto 0}
+.onb .brand.big{margin:4px auto 0;width:200px;background:#fff;border-radius:24px;padding:14px 18px}
 .onb-big{font-size:68px;text-align:center;line-height:1.1}
 .onb-feat{display:flex;gap:14px;align-items:center;background:var(--paper);border-radius:22px;padding:14px;font-size:15.5px;font-weight:700}
 .onb-feat .i{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-size:23px;flex:none;background:var(--c)}
@@ -1382,7 +1374,7 @@ var POSTS=[
  {id:4,cat:'share',author:'Maria Johansson',role:'Allmän Kurs',color:'#EB6378',time:'11:20',likes:12,
   text:'Jag har en barnvagn och vinterkläder till barn som vi inte behöver längre. Allt är [gratis] – skriv till mig! 🤝',
   tr:['Tengo un cochecito y ropa de invierno para niños que ya no necesitamos. Todo es gratis, ¡escríbeme! 🤝','I have a pram and children’s winter clothes we no longer need. Everything is free – message me! 🤝','لديّ عربة أطفال وملابس شتوية للأطفال لم نعد نحتاجها. كل شيء مجاني – راسلوني! 🤝','یک کالسکه و لباس زمستانی بچه دارم که دیگر لازم نداریم. همه رایگان است – به من پیام بدهید! 🤝','Artık ihtiyacımız olmayan bir bebek arabası ve çocuk kışlıkları var. Hepsi ücretsiz – bana yazın! 🤝','Маю дитячий візок і зимовий дитячий одяг, які нам уже не потрібні. Усе безкоштовно – пишіть мені! 🤝','У меня есть детская коляска и зимняя детская одежда, которые нам больше не нужны. Всё бесплатно – пишите! 🤝']},
- {id:5,cat:'allman',author:'Erik Svensson',role:'Lärare Allmän Kurs',color:'#114472',time:'12:45',likes:9,
+ {id:5,cat:'allman',author:'Erik Svensson',role:'Lärare Allmän Kurs',color:'#003861',time:'12:45',likes:9,
   text:'[Läxhjälp] i matematik och svenska varje onsdag 13:00–15:00 i Sal 305. Ta med dina frågor!',
   tr:['Ayuda con los deberes de matemáticas y sueco todos los miércoles de 13:00 a 15:00 en la Sala 305. ¡Trae tus preguntas!','Homework help in maths and Swedish every Wednesday 13:00–15:00 in Room 305. Bring your questions!','مساعدة في الواجبات في الرياضيات والسويدية كل أربعاء 13:00–15:00 في القاعة 305. أحضِروا أسئلتكم!','کمک درسی در ریاضی و سوئدی هر چهارشنبه 13:00–15:00 در کلاس 305. سؤال‌هایتان را بیاورید!','Her çarşamba 13:00–15:00 arası 305 numaralı salonda matematik ve İsveççe ödev yardımı. Sorularını getir!','Допомога з домашніми завданнями з математики та шведської щосереди 13:00–15:00 в аудиторії 305. Приносьте свої запитання!','Помощь с домашними заданиями по математике и шведскому каждую среду 13:00–15:00 в аудитории 305. Приносите вопросы!']},
  {id:6,cat:'sfi',author:'Yusuf Haddad',role:'SFI Kurs C',color:'#7B5EA7',time:'13:10',likes:18,
@@ -1403,11 +1395,11 @@ var WORDS={
 };
 var STORIES=[
  {name:'Frihamnen Fika',e:'☕',g:['#F4B844','#EB6378'],slides:[['☕','Förmiddagsfika','Varje vardag i cafeterian – alla är välkomna!'],['🥐','SFI-fika 10 kr','Ta med en kompis och öva svenska!']]},
- {name:'Språkcafé',e:'🗣️',g:['#3B8674','#BCE3E4'],slides:[['🗣️','Språkcafé varje torsdag','15:00–16:30 i Bibliotek / Studiehörna'],['🌍','12 språk på en eftermiddag','Lär dig svenska – lär ut ditt språk!']]},
- {name:'Göteborg Tur',e:'🏙️',g:['#114472','#5FA8D3'],slides:[['🚋','Med spårvagn genom stan','Från Frihamnen till Slottsskogen'],['🍂','Höst i Slottsskogen','Vilken fin dag tillsammans!']]},
+ {name:'Språkcafé',e:'🗣️',g:['#3B8674','#A3D7D6'],slides:[['🗣️','Språkcafé varje torsdag','15:00–16:30 i Bibliotek / Studiehörna'],['🌍','12 språk på en eftermiddag','Lär dig svenska – lär ut ditt språk!']]},
+ {name:'Göteborg Tur',e:'🏙️',g:['#003861','#5FA8D3'],slides:[['🚋','Med spårvagn genom stan','Från Frihamnen till Slottsskogen'],['🍂','Höst i Slottsskogen','Vilken fin dag tillsammans!']]},
  {name:'Profiltid IT',e:'💻',g:['#7B5EA7','#EB6378'],slides:[['💻','Profiltid IT','Vi bygger appar och hemsidor'],['📱','Vinga Connect','En elevidé blir en prototyp 🚀']]}
 ];
-var BOARD=[{n:'Amina Yusuf',w:1190,m:4720,c:'#3B8674'},{n:'Olena Kovalenko',w:1105,m:4410,c:'#7B5EA7'},{n:'Mehmet Yılmaz',w:980,m:4105,c:'#C9902A'},{n:'Sara Ahmadi',w:925,m:3890,c:'#EB6378'},{n:'Carlos Rivera',w:870,m:3620,c:'#114472'}];
+var BOARD=[{n:'Amina Yusuf',w:1190,m:4720,c:'#3B8674'},{n:'Olena Kovalenko',w:1105,m:4410,c:'#7B5EA7'},{n:'Mehmet Yılmaz',w:980,m:4105,c:'#C9902A'},{n:'Sara Ahmadi',w:925,m:3890,c:'#EB6378'},{n:'Carlos Rivera',w:870,m:3620,c:'#003861'}];
 var ROOMS=[
  {id:'301',x:14,y:14,w:59,h:78,k:'sal',c:'Allmän kurs Grund (SAS)'},
  {id:'302',x:77,y:14,w:59,h:78,k:'sal',c:'SFI Kväll, historia och samhällsämnen'},
@@ -1426,8 +1418,8 @@ var LOGOS={"vt": "<svg viewBox=\"0 0 98 75\" xmlns=\"http://www.w3.org/2000/svg\
 var GUIDE=[{k:'vt',bg:'#0079B4',n:'Västtrafik',u:'https://www.vasttrafik.se'},{k:'1177',bg:'#FFFFFF',n:'1177 Vårdguiden',u:'https://www.1177.se'},{k:'csn',bg:'#FFFFFF',n:'CSN',u:'https://www.csn.se'},{k:'af',bg:'#FFFFFF',n:'Arbetsförmedlingen',u:'https://arbetsformedlingen.se'},{k:'skv',bg:'#FFFFFF',n:'Skatteverket',u:'https://www.skatteverket.se'}];
 
 var SKINS=['#FFE0C7','#F3C7A1','#DFA67E','#C1865E','#94603F','#5E3B27'];
-var HAIRC=['#1E1A18','#4A2E1F','#8B5A2B','#D9A441','#A9A9A9','#EB6378','#3B8674','#114472'];
-var CLOTH=['#114472','#EB6378','#3B8674','#F4B844','#7B5EA7','#12233A'];
+var HAIRC=['#1E1A18','#4A2E1F','#8B5A2B','#D9A441','#A9A9A9','#EB6378','#3B8674','#003861'];
+var CLOTH=['#003861','#EB6378','#3B8674','#F4B844','#7B5EA7','#12233A'];
 var HAIRS=['short','long','curly','bun','hijab','cap','bald'];
 var EXPS=['smile','happy','neutral','wink','wow'];
 var ACCS=['none','glasses','headphones'];
@@ -1437,9 +1429,9 @@ var S={lang:'sv',logged:false,email:DEFAULT_EMAIL,name:'José Méndez',course:'s
  avatar:{skin:2,hair:'short',hc:0,exp:'smile',acc:'none',cloth:0},photo:null,filter:'all',liked:{},trOpen:{},board:'week',room:null,seen:{},sickType:'sick',posts:POSTS.slice()};
 
 /* ================= GRAPHICS ================= */
-var WING='M31.2 44 L2 5.5 C8 3 13.5 4.8 16.8 8.6 L19.4 6.3 C23.4 7.3 26 10.4 27.1 14 L29.6 12.4 C31 15.2 31.2 19 31.2 23 Z';
-function markSVG(){return '<svg viewBox="0 0 64 48" aria-hidden="true"><path d="'+WING+'" fill="#114472"/><path d="'+WING+'" transform="translate(64 0) scale(-1 1)" fill="#BCE3E4" stroke="#114472" stroke-width="1.3" stroke-linejoin="round"/></svg>'}
-function logoHTML(){return '<span class="mark">'+markSVG()+'</span><span class="wm"><b>VINGA</b><small>FOLKHÖGSKOLA GÖTEBORG</small></span>'}
+/* Official Vinga Folkhögskola logo, redrawn as vector from the school's artwork */
+function markSVG(){return '<svg viewBox="109 9 120 62" aria-hidden="true"><path d="M113 18L171 30L171 33L124 68L122 66L122 58L151 35L115 28Z" fill="#003861"/><path d="M214 12L217 19L217 21L188 44L224 52L226 52L226 61L221 61L168 49L168 47Z" fill="#A3D7D6"/></svg>'}
+function logoHTML(){return '<svg class="logo-full" viewBox="84 8 172 142" role="img" aria-label="Vinga Folkhögskola Göteborg"><path d="M113 18L171 30L171 33L124 68L122 66L122 58L151 35L115 28Z" fill="#003861"/><path d="M214 12L217 19L217 21L188 44L224 52L226 52L226 61L221 61L168 49L168 47Z" fill="#A3D7D6"/><rect x="88" y="80" width="164" height="2" fill="#003861"/><g fill="#003861"><path d="M92 88H98.6L105.5 107.5L112.4 88H119L106.6 117.6H104.4Z"/><rect x="130" y="88" width="6" height="29.6"/><path d="M150 88H154.8L170 108.2V88H175.6V117.6H170.9L155.6 97.3V117.6H150Z"/><path fill-rule="evenodd" d="M234 88H237.5L249.6 117.6H243.1L240 110.2H231.5L228.4 117.6H222Z M235.75 96.8L238.7 104.6H232.8Z"/></g><path d="M208.2 95.1A10.25 11.5 0 1 0 210.35 104.5H204" fill="none" stroke="#003861" stroke-width="6"/><rect x="88" y="124" width="164" height="2" fill="#003861"/><text x="170.5" y="145.5" text-anchor="middle" textLength="151" lengthAdjust="spacing" fill="#003861" font-size="11" font-weight="600" font-family="Avenir Next,Avenir,Century Gothic,Futura,Montserrat,Segoe UI,system-ui,sans-serif">FOLKHÖGSKOLA.GÖTEBORG</text></svg>'}
 function starPath(cx,cy,R,r){var p='';for(var i=0;i<10;i++){var rad=i%2?r:R;var ang=(i*36-90+18)*Math.PI/180;p+=(i?'L':'M')+(cx+rad*Math.cos(ang)).toFixed(2)+' '+(cy+rad*Math.sin(ang)).toFixed(2)}return p+'Z'}
 var FLAGS={
  sv:'<rect width="30" height="20" fill="#006AA7"/><rect x="9" width="4" height="20" fill="#FECC00"/><rect y="8" width="30" height="4" fill="#FECC00"/>',
@@ -1455,7 +1447,7 @@ function flagSVG(c){return '<svg class="flag" viewBox="0 0 30 20" aria-hidden="t
 function shade(hex,amt){var n=parseInt(hex.slice(1),16),r=Math.max(0,Math.min(255,(n>>16)+amt)),g=Math.max(0,Math.min(255,((n>>8)&255)+amt)),b=Math.max(0,Math.min(255,(n&255)+amt));return '#'+((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1)}
 function avatarSVG(a){
  var sk=SKINS[a.skin],hc=HAIRC[a.hc],cl=CLOTH[a.cloth],E='#12233A',hij=a.hair==='hijab';
- var s='<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="120" height="120" fill="#BCE3E4"/><circle cx="96" cy="22" r="30" fill="#fff" opacity=".35"/>';
+ var s='<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="120" height="120" fill="#A3D7D6"/><circle cx="96" cy="22" r="30" fill="#fff" opacity=".35"/>';
  if(a.hair==='long')s+='<path d="M33 52C31 27 46 20 60 20s29 7 27 32l4 44c-9 6-20 4-25 0H54c-5 4-16 6-25 0z" fill="'+hc+'"/>';
  if(hij)s+='<path d="M60 18C38 18 29 36 29 56c0 16 4 26-3 36-4 6-6 14-6 28h80c0-14-2-22-6-28-7-10-3-20-3-36 0-20-9-38-31-38z" fill="'+hc+'"/>';
  s+='<path d="M18 120c0-24 18-36 42-36s42 12 42 36z" fill="'+cl+'"/><path d="M48 86c4 5 20 5 24 0" stroke="'+shade(cl,-25)+'" stroke-width="3" fill="none" stroke-linecap="round"/>';
@@ -1468,7 +1460,7 @@ function avatarSVG(a){
   case 'curly':[[37,46,8],[43,34,9],[53,27,10],[67,27,10],[77,34,9],[83,46,8],[60,24,9]].forEach(function(c){s+='<circle cx="'+c[0]+'" cy="'+c[1]+'" r="'+c[2]+'" fill="'+hc+'"/>'});break;
   case 'bun':s+='<circle cx="60" cy="17" r="10" fill="'+hc+'"/><path d="M35 50c-2-20 10-29 25-29s27 9 25 29c-4-9-10-14-25-14s-21 5-25 14z" fill="'+hc+'"/>';break;
   case 'hijab':s+='<path d="M35 46c4-14 14-21 25-21s21 7 25 21c-6-6-15-9-25-9s-19 3-25 9z" fill="'+hc+'"/>';break;
-  case 'cap':s+='<path d="M36 58c-2-7-1-13 2-17h44c3 4 4 10 2 17-2-6-4-9-6-10H42c-2 1-4 4-6 10z" fill="'+hc+'"/><path d="M35 44c0-15 11-24 25-24s25 9 25 24z" fill="#114472"/><path d="M58 41h34c4 0 5 5 1 6l-35 1z" fill="#0B2F52"/><path d="M52.5 28.5l5.5 8 1.6-2.6-4.4-6.4z" fill="#fff"/><path d="M67.5 28.5l-5.5 8-1.6-2.6 4.4-6.4z" fill="#BCE3E4"/><circle cx="60" cy="20.5" r="2" fill="#BCE3E4"/>';break;
+  case 'cap':s+='<path d="M36 58c-2-7-1-13 2-17h44c3 4 4 10 2 17-2-6-4-9-6-10H42c-2 1-4 4-6 10z" fill="'+hc+'"/><path d="M35 44c0-15 11-24 25-24s25 9 25 24z" fill="#003861"/><path d="M58 41h34c4 0 5 5 1 6l-35 1z" fill="#00284A"/><path d="M52.5 28.5l5.5 8 1.6-2.6-4.4-6.4z" fill="#fff"/><path d="M67.5 28.5l-5.5 8-1.6-2.6 4.4-6.4z" fill="#A3D7D6"/><circle cx="60" cy="20.5" r="2" fill="#A3D7D6"/>';break;
  }
  s+='<circle cx="45" cy="62" r="4.5" fill="#EB6378" opacity=".22"/><circle cx="75" cy="62" r="4.5" fill="#EB6378" opacity=".22"/>';
  var eyes='<circle cx="51" cy="53" r="2.8" fill="'+E+'"/><circle cx="69" cy="53" r="2.8" fill="'+E+'"/>',smile='<path d="M52 64q8 7 16 0" stroke="'+E+'" stroke-width="2.6" fill="none" stroke-linecap="round"/>';
@@ -1783,7 +1775,7 @@ function camSnap(){
 function showShot(){var i=$('#camImg');if(!i)return;i.src=D.shot;i.hidden=false;$('#camVid').hidden=true;$('#camPh').hidden=true;$('#camSnapBtn').disabled=true;var b=$('#camStartBtn');b.textContent=t('cam_retake');b.disabled=false}
 function demoSelfie(){
  var c=document.createElement('canvas');c.width=c.height=512;var x=c.getContext('2d');
- var g=x.createLinearGradient(0,0,0,512);g.addColorStop(0,'#8FCBDD');g.addColorStop(.58,'#E9F5F3');g.addColorStop(.585,'#2B5D86');g.addColorStop(1,'#114472');x.fillStyle=g;x.fillRect(0,0,512,512);
+ var g=x.createLinearGradient(0,0,0,512);g.addColorStop(0,'#8FCBDD');g.addColorStop(.58,'#E9F5F3');g.addColorStop(.585,'#2B5D86');g.addColorStop(1,'#003861');x.fillStyle=g;x.fillRect(0,0,512,512);
  x.fillStyle='rgba(244,184,68,.9)';x.beginPath();x.arc(410,88,40,0,7);x.fill();
  x.strokeStyle='#34465E';x.lineCap='round';
  [[58,300,120],[455,300,90]].forEach(function(k){x.lineWidth=8;x.beginPath();x.moveTo(k[0],k[1]);x.lineTo(k[0],k[1]-k[2]-60);x.stroke();x.lineWidth=6;x.beginPath();x.moveTo(k[0]-30,k[1]-k[2]-50);x.lineTo(k[0]+(k[0]<256?110:-110),k[1]-k[2]-50);x.stroke();x.lineWidth=2;x.beginPath();x.moveTo(k[0]+(k[0]<256?80:-80),k[1]-k[2]-50);x.lineTo(k[0]+(k[0]<256?80:-80),k[1]-k[2]+10);x.stroke()});
@@ -1832,7 +1824,7 @@ var INTERESTS=[['fotboll','⚽'],['mat','🍲'],['musik','🎵'],['it','💻'],[
 /* Fictional students (no real staff or student names) */
 var PEOPLE={
  amina:{n:'Amina Yusuf',course:'SFI Kurs C',c:'#3B8674',speaks:['ar','en'],wants:['sv','es'],interests:['mat','promenad','film']},
- erik:{n:'Erik Lund',course:'Bibelskola',c:'#114472',speaks:['sv','en'],wants:['es','ar'],interests:['fotboll','musik']},
+ erik:{n:'Erik Lund',course:'Bibelskola',c:'#003861',speaks:['sv','en'],wants:['es','ar'],interests:['fotboll','musik']},
  olena:{n:'Olena Kovalenko',course:'Allmän kurs Grund',c:'#7B5EA7',speaks:['uk','ru','en'],wants:['sv'],interests:['konst','las','dans']},
  mehmet:{n:'Mehmet Yılmaz',course:'Allmän kurs Gymnasienivå',c:'#A8700F',speaks:['tr','ku','sv','en'],wants:['es'],interests:['fotboll','it','spel']},
  sara:{n:'Sara Ahmadi',course:'SFI Kväll',c:'#EB6378',speaks:['fa','en'],wants:['sv'],interests:['musik','film','mat']},
@@ -1841,7 +1833,7 @@ var PEOPLE={
  lina:{n:'Lina Berg',course:'Allmän kurs Gymnasienivå',c:'#F6A35B',speaks:['sv','en','fr'],wants:['es','ar'],interests:['it','film','las']},
  nour:{n:'Nour Haddad',course:'SFI Kurs B',c:'#3E3A8C',speaks:['ar','fr'],wants:['sv','en'],interests:['mat','las'],isNew:2},
  tigist:{n:'Tigist Bekele',course:'Allmän kurs Grund',c:'#2C6658',speaks:['ti','en'],wants:['sv'],interests:['dans','musik'],isNew:1},
- dmytro:{n:'Dmytro Shevchenko',course:'SFI Kurs C',c:'#0C3459',speaks:['uk','ru'],wants:['sv','en'],interests:['spel','it','fotboll'],isNew:3}
+ dmytro:{n:'Dmytro Shevchenko',course:'SFI Kurs C',c:'#00284A',speaks:['uk','ru'],wants:['sv','en'],interests:['spel','it','fotboll'],isNew:3}
 };
 var GROUP_ICON={'class':['🎓','var(--lilac-soft)'],cafe:['☕','var(--gold-soft)'],fotboll:['⚽','var(--teal-soft)']};
 function tx(k){var a=CTX[k];return a?fillMe(a[LI[S.lang]]||a[0]):''}
@@ -2160,7 +2152,7 @@ function renderSettings(){
   '<p class="st-ver">'+t('st_version')+'</p>';
 }
 var OB={step:0};
-function showOnboard(s){OB={step:s||0};$('#onboard').hidden=false;renderOnboard()}
+function showOnboard(s){OB={step:s||0};$('#push').hidden=true;$('#onboard').hidden=false;renderOnboard()}
 function obLangs(key){return Object.keys(LANG_NAMES).map(function(c){var on=S.profile[key].indexOf(c)>=0;return '<button class="pick'+(on?' on':'')+'" data-act="ob-lang" data-k="'+key+'" data-v="'+c+'" aria-pressed="'+on+'" lang="'+c+'">'+esc(LANG_NAMES[c])+'</button>'}).join('')}
 function renderOnboard(){
  var el=$('#onboard');if(!el||el.hidden)return;var s=OB.step,b='';

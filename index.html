@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#114472">
+<meta name="theme-color" content="#FAF6EE">
 <meta name="description" content="Vinga Connect – interaktiv prototyp för Vinga Folkhögskola, Frihamnen 15, Göteborg. SJU Solutions.">
 <title>Vinga Connect</title>
 <style>
@@ -45,7 +45,7 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 
 /* ---------- Phone frame ---------- */
 .phone{position:relative;width:100%;max-width:410px;height:820px;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);background:var(--cream);border-radius:46px;overflow:hidden;isolation:isolate;box-shadow:0 0 0 10px var(--night),0 0 0 11px #3A3942,0 30px 60px rgba(70,35,60,.25)}
-.statusbar{position:absolute;top:0;left:0;right:0;height:var(--sb);z-index:30;display:flex;justify-content:space-between;align-items:center;padding:4px 30px 0;font-size:12.5px;font-weight:700;direction:ltr;pointer-events:none;color:var(--ink)}
+.statusbar{position:absolute;top:0;left:0;right:0;height:var(--sb);z-index:65;display:flex;justify-content:space-between;align-items:center;padding:4px 30px 0;font-size:12.5px;font-weight:700;direction:ltr;pointer-events:none;color:var(--ink)}
 .statusbar .sig{display:flex;gap:5px;align-items:center}
 .statusbar .bat{width:22px;height:11px;border:1.6px solid currentColor;border-radius:3px;padding:1px}
 .statusbar .bat i{display:block;height:100%;width:78%;background:currentColor;border-radius:1px}
@@ -91,7 +91,7 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 .flag{width:21px;height:14px;border-radius:3px;overflow:hidden;flex:none;box-shadow:0 0 0 1px rgba(31,30,36,.15);display:block}
 .card{background:var(--paper);border-radius:28px;padding:18px;margin-bottom:12px}
 .field{display:flex;align-items:center;gap:8px;background:var(--cream);border:2px solid transparent;border-radius:18px;padding:0 14px;margin-bottom:6px;transition:border-color .2s}
-.field:focus-within{border-color:var(--night)}
+.field:focus-within{border-color:var(--ink)}
 .field input{flex:1;min-width:0;border:0;background:none;padding:13px 0;font-size:16px;outline:none}
 .field svg{width:18px;height:18px;color:var(--muted);flex:none}
 .field.bad{border-color:var(--pink-ink);animation:shake .4s}
@@ -99,7 +99,7 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 .coursechips{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:2px 0 16px}
 .cchip{padding:13px 10px;border-radius:18px;border:2px solid transparent;font-family:var(--display);font-weight:800;font-size:16px;color:var(--ink);transition:border-color .2s}
 .cchip:nth-child(1){background:var(--pink-soft)}.cchip:nth-child(2){background:var(--lilac-soft)}.cchip:nth-child(3){background:var(--teal-soft)}.cchip:nth-child(4){background:var(--gold-soft)}.cchip:nth-child(5){background:var(--orange-soft)}.cchip:nth-child(6){background:var(--lilac-soft)}.cchip:nth-child(7){background:var(--cream);grid-column:1/-1}
-.cchip.on{border-color:var(--night)}
+.cchip.on{border-color:var(--ink)}
 .btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:15px 18px;border-radius:999px;font-weight:800;font-size:16px;transition:transform .15s var(--ease),background .2s}
 .btn svg{width:19px;height:19px;flex:none}
 .btn.primary,.btn.coral{background:var(--night);color:#fff}
@@ -248,10 +248,10 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 /* ---------- Studier ---------- */
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
 .tile{background:var(--c);border-radius:24px;padding:14px 8px 12px;text-align:center;display:flex;flex-direction:column;align-items:center}
-.ti{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;margin-bottom:8px;font-size:17px}
+.ti{width:38px;height:38px;border-radius:50%;background:var(--paper);display:grid;place-items:center;margin-bottom:8px;font-size:17px}
 .ti svg{width:19px;height:19px}
 .tile b{font-family:var(--display);font-weight:800;font-size:28px;line-height:1.05;letter-spacing:-.02em}
-.tile small{font-size:12.5px;color:#4E4C57;line-height:1.25;margin-top:3px}
+.tile small{font-size:12.5px;color:var(--muted);line-height:1.25;margin-top:3px}
 .chip-pts{font-family:var(--display);font-weight:800;font-size:16px;color:var(--night);background:#fff;padding:6px 14px;border-radius:999px;display:inline-block;white-space:nowrap}
 .bump{animation:bump .45s}
 .route{background:var(--paper);border-radius:28px;padding:18px 16px 6px;margin-bottom:12px}
@@ -296,7 +296,7 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 .seg button.on{background:#fff;color:var(--night)}
 .br{display:flex;align-items:center;gap:10px;padding:6px 6px 6px 6px;border-radius:999px;background:rgba(255,255,255,.14);color:#fff;margin-bottom:8px}
 .br.p1{background:var(--pink);color:var(--night)}
-.br.p2{background:var(--cream);color:var(--night)}
+.br.p2{background:#FFF8EC;color:var(--night)}
 .br.p3{background:var(--gold);color:var(--night)}
 .rk{width:46px;height:36px;border-radius:999px;background:rgba(255,255,255,.22);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:16px;flex:none}
 .br.p1 .rk,.br.p3 .rk{background:rgba(255,255,255,.45)}
@@ -315,7 +315,7 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 .tt .tt-s{min-width:0}
 .tt .tt-s small{display:block;font-size:12px;color:var(--muted);font-weight:500}
 .tt .tt-r{font-weight:800;font-size:13px;background:var(--cream);padding:3px 10px;border-radius:999px;white-space:nowrap}
-.tt li.now .tt-r,.tt li.next .tt-r{background:#fff}
+.tt li.now .tt-r,.tt li.next .tt-r{background:var(--paper)}
 .map-btn{margin-top:12px}
 .facts-list{list-style:none;display:grid;gap:10px;margin-top:8px}
 .facts-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.45}
@@ -333,7 +333,7 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 /* ---------- Guide ---------- */
 .plan{margin-top:12px;border-radius:20px;overflow:hidden;background:var(--cream)}
 .plan svg{display:block;width:100%;height:auto;direction:ltr}
-.plan text{font-family:var(--display);font-weight:800;fill:var(--ink);text-anchor:middle;pointer-events:none}
+.plan text{font-family:var(--display);font-weight:800;fill:#1F1E24;text-anchor:middle;pointer-events:none}
 .room{cursor:pointer;outline:none}
 .room rect{transition:fill .2s,stroke .2s,stroke-width .2s}
 .room:hover rect,.room:focus-visible rect{stroke:var(--night);stroke-width:2.5}
@@ -390,7 +390,7 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 [dir=rtl] .chev{transform:scaleX(-1)}
 .langgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .lrow{display:flex;align-items:center;gap:9px;padding:11px 13px;border-radius:999px;border:2px solid transparent;background:var(--cream);font-weight:700;font-size:15px;text-align:start;transition:background .2s,border-color .2s}
-.lrow.on{background:var(--lilac-soft);border-color:var(--night)}
+.lrow.on{background:var(--lilac-soft);border-color:var(--ink)}
 .lrow .flag{width:24px;height:16px}
 .points-row{display:flex;align-items:center;gap:10px;background:var(--gold)}
 .points-row h3{flex:1;font-size:19px}
@@ -411,7 +411,7 @@ h1,h2,h3,.disp{font-family:var(--display);font-weight:800;line-height:1.12;lette
 .qrbox .qr{width:220px;height:220px;margin:12px auto}
 .qrbox .qr svg{width:100%;height:100%}
 textarea{width:100%;min-height:110px;border:2px solid transparent;border-radius:20px;padding:13px 14px;background:var(--paper);resize:vertical;outline:none;font-size:16px}
-textarea:focus,input[type=date]:focus{border-color:var(--night)}
+textarea:focus,input[type=date]:focus{border-color:var(--ink)}
 input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;padding:12px 16px;background:var(--paper);outline:none;direction:ltr}
 .fl{display:block;font-size:14px;font-weight:700;margin:16px 4px 8px}
 .opts{display:flex;flex-wrap:wrap;gap:8px}
@@ -439,7 +439,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .stprev.pop{animation:popIn .3s var(--ease)}
 .sw{display:flex;flex-wrap:wrap;gap:10px}
 .swatch{width:36px;height:36px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12);transition:box-shadow .2s}
-.swatch.on{box-shadow:0 0 0 3px var(--cream),0 0 0 5.5px var(--night)}
+.swatch.on{box-shadow:0 0 0 3px var(--cream),0 0 0 5.5px var(--ink)}
 .cam{position:relative;width:220px;height:220px;margin:6px auto 10px;border-radius:50%;overflow:hidden;background:var(--night);box-shadow:0 0 0 5px var(--paper),0 0 0 7px var(--lilac)}
 .cam video,.cam img{width:100%;height:100%;object-fit:cover;display:block}
 .cam video{transform:scaleX(-1)}
@@ -487,7 +487,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .req{background:var(--orange-soft);border-radius:24px;padding:14px;margin-top:12px}
 .req .rh{display:flex;gap:10px;align-items:center}
 .req .rh div{flex:1;min-width:0;font-size:14.5px}
-.req p{background:#fff;border-radius:16px;padding:10px 12px;margin:10px 0;font-size:15px}
+.req p{background:var(--paper);border-radius:16px;padding:10px 12px;margin:10px 0;font-size:15px}
 .req .row2 .btn{padding:11px 14px;font-size:15px}
 .crow{display:flex;gap:12px;align-items:center;padding:12px 16px;width:100%;text-align:start}
 .crow+.crow{border-top:1px solid var(--line)}
@@ -499,7 +499,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .gav{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:21px;flex:none}
 .chatv{position:absolute;inset:0;z-index:28;background:var(--cream);display:flex;flex-direction:column;animation:slideIn .3s var(--ease)}
 @keyframes slideIn{from{transform:translateX(28px);opacity:0}to{transform:none;opacity:1}}
-.cv-h{flex:none;display:flex;align-items:center;gap:10px;padding:calc(var(--sb) + 10px) 12px 14px;background:var(--orange);border-radius:0 0 26px 26px}
+.cv-h{color:var(--night);flex:none;display:flex;align-items:center;gap:10px;padding:calc(var(--sb) + 10px) 12px 14px;background:var(--orange);border-radius:0 0 26px 26px}
 .cv-h .x{background:rgba(255,255,255,.7);font-size:21px}
 [dir=rtl] .cv-back{transform:scaleX(-1)}
 .cv-t{flex:1;min-width:0}
@@ -535,7 +535,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .phr small{display:block;font-size:11.5px;color:var(--muted);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .cv-comp{flex:none;display:flex;gap:8px;align-items:center;padding:8px 12px calc(12px + env(safe-area-inset-bottom,0px))}
 .cv-comp input{flex:1;min-width:0;border:2px solid transparent;background:var(--paper);border-radius:999px;padding:12px 16px;font-size:15.5px;outline:none}
-.cv-comp input:focus{border-color:var(--night)}
+.cv-comp input:focus{border-color:var(--ink)}
 .cv-mic,.cv-send{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex:none}
 .cv-mic{background:var(--paper)}
 .cv-mic.rec{background:var(--pink);animation:bump .8s infinite}
@@ -546,7 +546,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .ab-hello{background:var(--lilac-soft);border-radius:18px;padding:12px 14px;font-size:15.5px;display:flex;gap:10px;align-items:flex-start}
 .ab-hello p{flex:1}
 .ab-hello small{display:block;font-size:12px;color:var(--lilac-ink);font-weight:700;margin-bottom:2px}
-.ab-hello button{width:38px;height:38px;border-radius:50%;background:#fff;flex:none;display:grid;place-items:center}
+.ab-hello button{width:38px;height:38px;border-radius:50%;background:var(--paper);flex:none;display:grid;place-items:center}
 .ab-hello button svg{width:18px;height:18px}
 .ab-sec{margin-top:12px}
 .ab-sec>small{display:block;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:6px}
@@ -555,7 +555,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .pick{padding:8px 13px;border-radius:999px;background:var(--paper);font-weight:700;font-size:14px;border:2px solid transparent}
 .pick.on{background:var(--night);color:#fff}
 .pe-in{width:100%;border:2px solid transparent;border-radius:16px;padding:12px 14px;background:var(--paper);font-size:15.5px;outline:none;resize:vertical}
-.pe-in:focus{border-color:var(--night)}
+.pe-in:focus{border-color:var(--ink)}
 .note2{font-size:13.5px;color:var(--teal-ink);margin-top:14px;background:var(--teal-soft);border-radius:16px;padding:10px 12px}
 .menu-opt{display:flex;gap:12px;align-items:center;width:100%;padding:14px 16px;border-radius:18px;background:var(--paper);font-weight:700;font-size:15.5px;margin-bottom:8px;text-align:start}
 .menu-opt.danger{color:var(--pink-ink)}
@@ -573,7 +573,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .evb>small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
 .evg{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:8px;font-size:12.5px;color:var(--muted)}
 .stack{display:flex}
-.stack .av{width:26px;height:26px;font-size:10px;box-shadow:0 0 0 2px #fff}
+.stack .av{width:26px;height:26px;font-size:10px;box-shadow:0 0 0 2px var(--paper)}
 .stack .av+.av{margin-inline-start:-8px}
 .evj{grid-column:1/-1;padding:10px 14px;border-radius:999px;background:var(--cream);font-weight:800;font-size:14.5px;width:100%;transition:background .2s,color .2s}
 .evj.on{background:var(--teal);color:#fff}
@@ -590,7 +590,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .card.fr>*{position:relative;z-index:1}
 .fr h3{font-size:20px}
 .fr .frd{font-size:14.5px;margin:4px 0 12px}
-.frp{display:flex;gap:12px;align-items:center;background:#fff;border-radius:20px;padding:12px;margin:10px 0}
+.frp{display:flex;gap:12px;align-items:center;background:var(--paper);color:var(--ink);border-radius:20px;padding:12px;margin:10px 0}
 .frp .av{width:54px;height:54px;font-size:18px}
 .frp b{display:block;font-size:16px;font-weight:800}
 .frp small{display:block;font-size:13px;color:var(--muted)}
@@ -608,11 +608,11 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .fadder h3{font-size:20px}
 .fadder .frd{font-size:14.5px;margin:4px 0 12px}
 .fd-list{list-style:none;display:grid;gap:8px;margin:8px 0 12px}
-.fd-t{display:flex;gap:10px;align-items:center;width:100%;text-align:start;background:#fff;border-radius:16px;padding:10px 12px;font-size:14.5px}
-.fd-t i{width:24px;height:24px;border-radius:8px;border:2px solid var(--line);flex:none;display:grid;place-items:center;font-style:normal;font-size:14px;font-weight:900;color:#fff;background:#fff;transition:background .2s,border-color .2s}
+.fd-t{display:flex;gap:10px;align-items:center;width:100%;text-align:start;background:var(--paper);border-radius:16px;padding:10px 12px;font-size:14.5px}
+.fd-t i{width:24px;height:24px;border-radius:8px;border:2px solid var(--line);flex:none;display:grid;place-items:center;font-style:normal;font-size:14px;font-weight:900;color:#fff;background:var(--paper);transition:background .2s,border-color .2s}
 .fd-t.on i{background:var(--teal);border-color:var(--teal)}
 .fd-t.on span{text-decoration:line-through;color:var(--muted)}
-.fd-prog{height:8px;border-radius:999px;background:#fff;overflow:hidden;margin:6px 0 4px}
+.fd-prog{height:8px;border-radius:999px;background:var(--paper);overflow:hidden;margin:6px 0 4px}
 .fd-prog i{display:block;height:100%;background:var(--teal);transition:width .4s var(--ease)}
 .fd-sub{display:flex;justify-content:space-between;font-size:13px;color:var(--teal-ink);font-weight:700}
 .fadder .out{font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:3px;margin-top:10px;color:var(--teal-ink)}
@@ -625,7 +625,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .pl-q span{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
 .pl-opts{display:grid;gap:8px;margin-top:12px}
 .pl-o{display:block;text-align:start;padding:11px 14px;border-radius:16px;background:var(--cream);border:2px solid transparent;width:100%;transition:border-color .2s}
-.pl-o:hover{border-color:var(--night)}
+.pl-o:hover{border-color:var(--ink)}
 .pl-o b,.pl-r .lbl b{display:block;font-size:14.5px;font-weight:700}
 .pl-o small,.pl-r .lbl small{display:block;font-size:12.5px;color:var(--muted)}
 .pl-r{position:relative;overflow:hidden;border-radius:16px;background:var(--cream);padding:10px 14px;display:flex;align-items:center;gap:10px}
@@ -638,6 +638,90 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
 .pl-f{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;font-size:13px;color:var(--muted)}
 .pl-f b{color:var(--gold-ink)}
 .pl-f button{font-weight:700;text-decoration:underline;text-underline-offset:3px;color:var(--pink-ink);font-size:13px}
+
+/* ---------- Settings, notifications, onboarding ---------- */
+.fr h3,.sickcard h3,.points-row h3{color:var(--night)}
+.iconbtn{position:relative}
+.iconbtn .nbadge{top:-4px;inset-inline-end:-4px}
+.studio-btn.setbtn{background:var(--paper);color:var(--ink)}
+.setbtn .si{background:var(--lilac-soft)}
+.setbtn small{color:var(--muted)}
+.setbtn::after{display:none}
+.st-sec{margin:18px 6px 8px;font-size:13.5px;font-weight:800;color:var(--muted)}
+.st-group{background:var(--paper);border-radius:20px;overflow:hidden}
+.st-row{display:flex;align-items:center;gap:12px;padding:12px 16px;width:100%;text-align:start;font-size:15px;min-height:52px;color:var(--ink)}
+.st-row+.st-row,.st-group>*+*{border-top:1px solid var(--line)}
+.st-row .sl{flex:1;min-width:0}
+.st-row small{display:block;font-size:12.5px;color:var(--muted)}
+.st-row .ch2{color:var(--muted);font-size:18px}
+[dir=rtl] .st-row .ch2{transform:scaleX(-1)}
+.st-row.danger{color:var(--pink-ink);font-weight:800}
+.st-mini{padding:7px 12px;border-radius:999px;background:var(--cream);font-weight:800;font-size:13px}
+.switch{width:50px;height:30px;border-radius:999px;background:var(--line);position:relative;flex:none;transition:background .2s}
+.switch::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .2s var(--ease)}
+.switch[aria-checked=true]{background:var(--teal)}
+.switch[aria-checked=true]::after{transform:translateX(20px)}
+.switch:disabled{opacity:.55;cursor:default}
+.theme-seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--cream);border-radius:999px;padding:4px;margin:0 16px 14px}
+.theme-seg button{padding:9px 4px;border-radius:999px;font-weight:800;font-size:14px;color:var(--muted)}
+.theme-seg button.on{background:var(--paper);color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.pol summary{list-style:none;cursor:pointer}
+.pol summary::-webkit-details-marker{display:none}
+.pol ul{margin:0 16px 12px;padding-inline-start:18px;font-size:14px;color:var(--muted);display:grid;gap:6px}
+.pol .pn{margin:0 16px 14px;font-size:12.5px;color:var(--gold-ink);font-weight:700}
+.st-ver{text-align:center;font-size:12.5px;color:var(--muted);margin:18px 0 6px}
+.nt-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:2px 2px 10px}
+.nrow{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:start;padding:12px;border-radius:18px;background:var(--paper);margin-bottom:8px;color:var(--ink)}
+.nrow .ni{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:19px;flex:none;background:var(--c)}
+.nrow .nt{flex:1;min-width:0}
+.nrow b{display:block;font-size:14.5px;font-weight:800}
+.nrow small{display:block;font-size:13.5px;color:var(--muted);line-height:1.4;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.nrow time{font-size:12px;color:var(--muted);flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.udot{width:10px;height:10px;border-radius:50%;background:var(--pink-ink)}
+.nrow.read{opacity:.62}
+.push{position:absolute;top:calc(var(--sb) + 8px);left:10px;right:10px;z-index:85;display:flex;gap:10px;align-items:center;background:var(--paper);color:var(--ink);border-radius:20px;padding:10px 12px;box-shadow:0 12px 30px rgba(0,0,0,.25);text-align:start}
+.push.anim{animation:pushIn .4s var(--ease)}
+@keyframes pushIn{from{transform:translateY(-130%);opacity:0}}
+.push-ic{width:38px;height:38px;border-radius:10px;background:#fff;padding:8px 6px;flex:none;box-shadow:0 0 0 1px var(--line)}
+.push-t{flex:1;min-width:0}
+.push b{display:block;font-size:14px}
+.push small{display:block;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.push em{font-style:normal;font-size:11.5px;color:var(--muted);flex:none;align-self:flex-start}
+.onb{position:absolute;inset:0;z-index:60;background:var(--cream);display:flex;flex-direction:column;padding:calc(var(--sb) + 10px) 20px calc(20px + env(safe-area-inset-bottom,0px));animation:fade .3s}
+.onb-top{display:flex;justify-content:flex-end;min-height:38px}
+.onb-skip{font-weight:800;color:var(--muted);padding:8px 10px}
+.onb-body{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:12px;padding:4px 2px 12px;animation:slideIn .35s var(--ease)}
+.onb h2{font-size:27px;text-align:center}
+.onb .d{text-align:center;color:var(--muted);font-size:15.5px}
+.onb .brand.big{margin:4px auto 0}
+.onb-big{font-size:68px;text-align:center;line-height:1.1}
+.onb-feat{display:flex;gap:14px;align-items:center;background:var(--paper);border-radius:22px;padding:14px;font-size:15.5px;font-weight:700}
+.onb-feat .i{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-size:23px;flex:none;background:var(--c)}
+.ob-ok{text-align:center;font-weight:800;color:var(--teal-ink);background:var(--teal-soft);border-radius:16px;padding:12px}
+.onb-foot{display:flex;flex-direction:column;gap:14px}
+.dots{display:flex;justify-content:center;gap:6px}
+.dots i{width:8px;height:8px;border-radius:999px;background:var(--line);transition:width .3s var(--ease),background .3s}
+.dots i.on{width:26px;background:var(--ink)}
+.phone:has(#scrApp.on) .statusbar{color:#1F1E24}
+.phone:has(#onboard:not([hidden])) .statusbar{color:var(--ink)}
+
+/* ---------- Dark theme ---------- */
+html[data-theme=dark]{color-scheme:dark;--cream:#16151B;--paper:#22212A;--line:#34323E;--ink:#F2F0F7;--muted:#A9A7B5;--pink-soft:#3A2229;--pink-ink:#F58FA0;--gold-soft:#372D17;--gold-ink:#F4C766;--teal-soft:#183029;--teal-ink:#7CCBB4;--lilac-soft:#2A2843;--lilac-ink:#C9C6FB;--orange-soft:#3A2A1C}
+html[data-theme=dark] body{background:linear-gradient(160deg,#221C27 0%,#251E1A 100%)}
+html[data-theme=dark] .phone{box-shadow:0 0 0 10px #050508,0 0 0 11px #3A3942,0 30px 60px rgba(0,0,0,.55)}
+html[data-theme=dark] :is(.btn.primary,.btn.coral,.lchip.on,.chip.on,.pill-dark,.here,.opt.on,.tabs3 button.on,.bn em,.act.tron,.msg.me .bub,.cv-send,.pick.on,.chev,.gc a,.toast){background:#F2F0F7;color:#1F1E24}
+html[data-theme=dark] .board{background:#2A2933;box-shadow:inset 0 0 0 1px #3B3946}
+html[data-theme=dark] .llpop{background:#2E2C38;box-shadow:0 0 0 1px #45424F,0 12px 26px rgba(0,0,0,.45)}
+html[data-theme=dark] .login-hero{background:#FFFFFF}
+html[data-theme=dark] .login-hero h1{color:#1F1E24}
+html[data-theme=dark] .login-hero p{color:#67656F}
+html[data-theme=dark] .nav{background:rgba(42,40,52,.62);border-color:rgba(255,255,255,.12)}
+html[data-theme=dark] .nav button:not(.on){color:#F2F0F7}
+html[data-theme=dark] .nav button:not(.on):hover{background:rgba(255,255,255,.08)}
+html[data-theme=dark] .pl-r.mine .bar{background:#6E5416}
+html[data-theme=dark] .push{box-shadow:0 0 0 1px #3B3946,0 12px 30px rgba(0,0,0,.55)}
+html[data-theme=dark] .statusbar{color:#F2F0F7}
+@media (max-width:480px),(max-height:600px){html[data-theme=dark] body{background:var(--cream)}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -676,6 +760,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
       <button class="av hdr-av" data-act="tab" data-tab="prof" data-avatar data-i18n-aria="tab_prof"></button>
       <div class="hdr-t"><b id="greet"></b><small id="greetSub"></small></div>
       <span class="hdr-mark" data-logo="mark" title="Vinga Folkhögskola"></span>
+      <button class="iconbtn" data-act="open-notifs" data-i18n-aria="nt_title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><i class="nbadge" id="bellBadge" hidden></i></button>
       <button class="iconbtn" data-act="open-lang" data-i18n-aria="lang_lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg><span id="hdrLang">SV</span></button>
     </header>
 
@@ -819,6 +904,7 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
         <button class="card studio-btn" data-act="studio-open"><span class="si" aria-hidden="true">📸</span><span><b data-i18n="studio"></b><small data-i18n="studio_d"></small></span><span class="chev" aria-hidden="true">→</span></button>
         <div class="card"><h3 style="font-size:19px;margin-bottom:10px" data-i18n="lang_lbl"></h3><div class="langgrid" id="profLangs"></div></div>
         <div class="card points-row"><h3 data-i18n="my_points"></h3><span class="chip-pts">★ <bdi class="pts"></bdi></span></div>
+        <button class="card studio-btn setbtn" data-act="open-settings"><span class="si" aria-hidden="true">⚙️</span><span><b data-i18n="st_title"></b><small data-i18n="st_open_d"></small></span><span class="chev" aria-hidden="true">→</span></button>
         <button class="btn ghost" data-act="logout"><span data-i18n="logout"></span></button>
         <p class="credit">Vinga Connect, prototyp 1.0<br>SJU Solutions</p>
       </div>
@@ -954,6 +1040,34 @@ input[type=date]{width:100%;border:2px solid transparent;border-radius:999px;pad
       <div class="sheet-b" id="evBody"></div>
     </div>
   </div>
+
+  <div class="ov" id="ovNotifs" role="dialog" aria-modal="true">
+    <div class="sheet"><div class="grab"></div>
+      <div class="sheet-h"><h2 data-i18n="nt_title"></h2><button class="x" data-act="close" data-i18n-aria="close">✕</button></div>
+      <div class="sheet-b" id="ntBody"></div>
+    </div>
+  </div>
+
+  <div class="ov" id="ovSettings" role="dialog" aria-modal="true">
+    <div class="sheet" style="height:92%"><div class="grab"></div>
+      <div class="sheet-h"><h2 data-i18n="st_title"></h2><button class="x" data-act="close" data-i18n-aria="close">✕</button></div>
+      <div class="sheet-b" id="setBody" style="flex:1"></div>
+    </div>
+  </div>
+
+  <div class="ov center" id="ovDelete" role="dialog" aria-modal="true">
+    <div class="qrbox"><div style="font-size:44px" aria-hidden="true">⚠️</div><h2 data-i18n="st_delete_t"></h2><p class="muted" style="margin:8px 0 18px" data-i18n="st_delete_d"></p>
+      <button class="btn" style="background:#B3304A;color:#fff" data-act="st-delete-ok" data-i18n="st_delete_ok"></button>
+      <button class="btn ghost mt" data-act="close" data-i18n="st_cancel"></button></div>
+  </div>
+
+  <section class="onb" id="onboard" hidden role="dialog" aria-modal="true" aria-label="Vinga Connect">
+    <div class="onb-top"><button class="onb-skip" id="obSkip" data-act="ob-skip" data-i18n="ob_skip"></button></div>
+    <div class="onb-body" id="obBody"></div>
+    <div class="onb-foot"><div class="dots" id="obDots"></div><button class="btn primary" id="obNext" data-act="ob-next"></button></div>
+  </section>
+
+  <button class="push" id="push" hidden data-act="push-open"><span class="push-ic" data-logo="mark"></span><span class="push-t"><b id="pushT"></b><small id="pushB"></small></span><em id="pushTime"></em></button>
 
   <div class="llpop" id="llpop" hidden role="tooltip"></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -1164,6 +1278,8 @@ Object.assign(I18N,{"tab_chat": ["Chatt", "Chat", "Chat", "الدردشة", "گ�
 Object.assign(I18N,{"ev_title": ["Händer på Vinga", "Pasa en Vinga", "Happening at Vinga", "يحدث في فينغا", "در وینگا چه خبر است", "Vinga’da neler oluyor", "Що відбувається у Vinga", "Что происходит в Vinga"], "ev_going": ["{n} kommer", "Van {n}", "{n} going", "سيحضر {n}", "{n} نفر می‌آیند", "{n} kişi geliyor", "Ідуть: {n}", "Идут: {n}"], "ev_class": ["{n} från din klass", "{n} de tu clase", "{n} from your class", "{n} من صفك", "{n} نفر از کلاس تو", "Sınıfından {n} kişi", "З твого класу: {n}", "Из твоего класса: {n}"], "ev_join": ["Jag kommer", "Voy", "I’m going", "سأحضر", "می‌آیم", "Geliyorum", "Я піду", "Я пойду"], "ev_joined": ["✓ Du kommer", "✓ Vas", "✓ You’re going", "✓ ستحضر", "✓ می‌آیی", "✓ Geliyorsun", "✓ Ти йдеш", "✓ Ты идёшь"], "ev_joined_t": ["Du är anmäld! Vi ses där 🙌", "¡Apuntado/a! Nos vemos allí 🙌", "You’re signed up! See you there 🙌", "تم تسجيلك! نراك هناك 🙌", "ثبت‌نام شدی! آنجا می‌بینیمت 🙌", "Kaydoldun! Orada görüşürüz 🙌", "Тебе записано! До зустрічі 🙌", "Ты записан(а)! Увидимся там 🙌"], "ev_left": ["Du är inte längre anmäld", "Ya no estás apuntado/a", "You’re no longer signed up", "لم تعد مسجلًا", "دیگر ثبت‌نام نیستی", "Artık kayıtlı değilsin", "Тебе більше не записано", "Ты больше не записан(а)"], "ev_who": ["Vem kommer?", "¿Quién va?", "Who’s going?", "من سيحضر؟", "چه کسانی می‌آیند؟", "Kimler geliyor?", "Хто йде?", "Кто идёт?"], "ev_more": ["och {n} till", "y {n} más", "and {n} more", "و{n} آخرون", "و {n} نفر دیگر", "ve {n} kişi daha", "і ще {n}", "и ещё {n}"], "ev_when": ["När", "Cuándo", "When", "متى", "کی", "Ne zaman", "Коли", "Когда"], "ev_where": ["Var", "Dónde", "Where", "أين", "کجا", "Nerede", "Де", "Где"], "fr_title": ["Fika-roulette", "Fika-ruleta", "Fika roulette", "روليت الفيكا", "فیکای شانسی", "Fika ruleti", "Фіка-рулетка", "Фика-рулетка"], "fr_desc": ["Varje vecka paras du ihop med någon från en annan kurs för att fika tillsammans.", "Cada semana te emparejamos con alguien de otro curso para tomar el fika juntos.", "Every week you’re paired with someone from another course to have fika together.", "كل أسبوع نجمعك مع شخص من دورة أخرى لتشربا القهوة معًا.", "هر هفته با کسی از دوره‌ای دیگر جفت می‌شوی تا با هم فیکا کنید.", "Her hafta seni başka bir kurstan biriyle birlikte fika yapman için eşleştiriyoruz.", "Щотижня тебе об’єднують з кимось з іншого курсу, щоб разом випити кави.", "Каждую неделю тебя объединяют с кем-то из другого курса, чтобы вместе выпить кофе."], "fr_optin": ["Jag vill vara med", "Quiero participar", "I want to join", "أريد المشاركة", "می‌خواهم شرکت کنم", "Katılmak istiyorum", "Хочу взяти участь", "Хочу участвовать"], "fr_optout": ["Gå ur fika-roulette", "Salir de la fika-ruleta", "Leave fika roulette", "الانسحاب من روليت الفيكا", "خروج از فیکای شانسی", "Fika ruletinden ayrıl", "Вийти з фіка-рулетки", "Выйти из фика-рулетки"], "fr_out_t": ["Du är inte längre med", "Ya no participas", "You’ve left", "لم تعد مشاركًا", "دیگر شرکت نمی‌کنی", "Artık katılmıyorsun", "Ти більше не береш участі", "Ты больше не участвуешь"], "fr_spin": ["Visa veckans fikakompis ☕", "Ver mi compañero de fika de la semana ☕", "Show this week’s fika buddy ☕", "اعرض رفيق الفيكا لهذا الأسبوع ☕", "نمایش هم‌فیکای این هفته ☕", "Bu haftanın fika arkadaşını göster ☕", "Показати фіка-партнера тижня ☕", "Показать фика-партнёра недели ☕"], "fr_again": ["Någon annan", "Otra persona", "Someone else", "شخص آخر", "کس دیگری", "Başka biri", "Інша людина", "Другой человек"], "fr_when": ["{d} kl 10:15 i matsalen", "{d} a las 10:15 en el comedor", "{d} at 10:15 in the dining room", "{d} الساعة 10:15 في قاعة الطعام", "{d} ساعت 10:15 در سالن غذاخوری", "{d} saat 10:15’te yemekhanede", "{d} о 10:15 у їдальні", "{d} в 10:15 в столовой"], "fr_both": ["Ni gillar båda", "A los dos os gusta", "You both like", "كلاكما يحب", "هر دو دوست دارید", "İkiniz de seviyorsunuz", "Вам обом подобається", "Вам обоим нравится"], "fr_ice": ["Samtalsstartare", "Para empezar a hablar", "Conversation starter", "لبدء الحديث", "شروع گفتگو", "Sohbet başlatıcı", "Щоб почати розмову", "Чтобы начать разговор"], "fr_hi": ["Skicka hej", "Saludar", "Say hi", "أرسل تحية", "سلام بفرست", "Merhaba de", "Привітатися", "Поздороваться"], "fr_privacy": ["Frivilligt – du kan gå ur när du vill. Bara du och din kompis ser matchningen.", "Voluntario: puedes salir cuando quieras. Solo tú y tu compañero/a veis el emparejamiento.", "Optional – you can leave any time. Only you and your buddy see the match.", "اختياري – يمكنك الانسحاب متى شئت. أنت ورفيقك فقط تريان التطابق.", "اختیاری – هر وقت خواستی می‌توانی خارج شوی. فقط تو و هم‌فیکایت جفت شدن را می‌بینید.", "İsteğe bağlı – istediğin zaman ayrılabilirsin. Eşleşmeyi sadece sen ve arkadaşın görür.", "Добровільно – можна вийти будь-коли. Пару бачите лише ти та твій партнер.", "Добровольно – можно выйти в любой момент. Пару видите только ты и твой партнёр."], "fr_finding": ["Letar efter din fikakompis…", "Buscando tu compañero de fika…", "Finding your fika buddy…", "جارٍ البحث عن رفيق الفيكا…", "در حال پیدا کردن هم‌فیکای تو…", "Fika arkadaşın aranıyor…", "Шукаємо твого фіка-партнера…", "Ищем твоего фика-партнёра…"], "fr_week": ["Veckans fikakompis", "Tu compañero de fika de la semana", "This week’s fika buddy", "رفيق الفيكا لهذا الأسبوع", "هم‌فیکای این هفته", "Bu haftanın fika arkadaşı", "Фіка-партнер тижня", "Фика-партнёр недели"]});
 /* New students, buddies and polls translations */
 Object.assign(I18N,{"nw_title": ["Nya på Vinga den här veckan", "Nuevos en Vinga esta semana", "New at Vinga this week", "جدد في فينغا هذا الأسبوع", "تازه‌واردهای وینگا این هفته", "Bu hafta Vinga’ya yeni gelenler", "Нові у Vinga цього тижня", "Новенькие в Vinga на этой неделе"], "nw_desc": ["Säg välkommen – ett hej gör stor skillnad!", "Dales la bienvenida: ¡un saludo marca la diferencia!", "Say welcome – a simple hi makes a big difference!", "رحّب بهم – تحية بسيطة تصنع فرقًا كبيرًا!", "خوش‌آمد بگو – یک سلام ساده خیلی فرق ایجاد می‌کند!", "Hoş geldin de – küçük bir merhaba büyük fark yaratır!", "Привітай – просте «привіт» багато значить!", "Поприветствуй – простое «привет» много значит!"], "nw_btn": ["Säg välkommen 👋", "Dar la bienvenida 👋", "Say welcome 👋", "رحّب 👋", "خوش‌آمد بگو 👋", "Hoş geldin de 👋", "Привітати 👋", "Поприветствовать 👋"], "nw_new": ["Ny", "Nuevo", "New", "جديد", "جدید", "Yeni", "Новий", "Новый"], "nw_started": ["Började {d}", "Empezó el {d}", "Started on {d}", "بدأ يوم {d}", "شروع: {d}", "Başlangıç: {d}", "Почав(ла): {d}", "Начал(а): {d}"], "nw_speaks": ["Talar", "Habla", "Speaks", "يتحدث", "صحبت می‌کند", "Konuşuyor", "Розмовляє", "Говорит"], "fd_title": ["Fadder för nya deltagare", "Padrino o madrina para los nuevos", "Buddy for new students", "مرافق للطلاب الجدد", "همراه برای تازه‌واردها", "Yeni öğrencilere rehber arkadaş", "Наставник для новеньких", "Наставник для новичков"], "fd_desc": ["Nya deltagare får en fadder från en annan kurs som hjälper dem de första veckorna.", "Los nuevos reciben un padrino o madrina de otro curso que les ayuda las primeras semanas.", "New students get a buddy from another course who helps them in their first weeks.", "يحصل الطلاب الجدد على مرافق من دورة أخرى يساعدهم في الأسابيع الأولى.", "تازه‌واردها یک همراه از دوره‌ای دیگر می‌گیرند که در هفته‌های اول کمکشان می‌کند.", "Yeni öğrenciler, ilk haftalarda onlara yardım eden başka bir kurstan bir rehber arkadaş edinir.", "Новенькі отримують наставника з іншого курсу, який допомагає їм у перші тижні.", "Новички получают наставника из другого курса, который помогает им в первые недели."], "fd_join": ["Jag vill bli fadder", "Quiero ser padrino o madrina", "I want to be a buddy", "أريد أن أكون مرافقًا", "می‌خواهم همراه باشم", "Rehber arkadaş olmak istiyorum", "Хочу бути наставником", "Хочу быть наставником"], "fd_leave": ["Sluta vara fadder", "Dejar de ser padrino o madrina", "Stop being a buddy", "التوقف عن كوني مرافقًا", "دیگر همراه نباشم", "Rehber arkadaşlığı bırak", "Перестати бути наставником", "Перестать быть наставником"], "fd_left": ["Du är inte längre fadder", "Ya no eres padrino ni madrina", "You’re no longer a buddy", "لم تعد مرافقًا", "دیگر همراه نیستی", "Artık rehber arkadaş değilsin", "Ти більше не наставник", "Ты больше не наставник"], "fd_yours": ["Din nya kompis", "Tu nuevo compañero", "Your new buddy", "رفيقك الجديد", "دوست جدید تو", "Yeni arkadaşın", "Твій новий друг", "Твой новый друг"], "fd_todo": ["Att göra tillsammans", "Para hacer juntos", "Things to do together", "أشياء تفعلانها معًا", "کارهایی برای انجام با هم", "Birlikte yapılacaklar", "Що зробити разом", "Что сделать вместе"], "fd_t1": ["Visa runt i skolan: salar, matsal och bibliotek", "Enseñarle la escuela: aulas, comedor y biblioteca", "Show them around: classrooms, dining room and library", "عرّفه على المدرسة: القاعات وقاعة الطعام والمكتبة", "مدرسه را نشانش بده: کلاس‌ها، غذاخوری و کتابخانه", "Okulu gezdir: sınıflar, yemekhane ve kütüphane", "Покажи школу: аудиторії, їдальню й бібліотеку", "Покажи школу: аудитории, столовую и библиотеку"], "fd_t2": ["Fika tillsammans första veckan", "Tomar un fika juntos la primera semana", "Have fika together in the first week", "اشربا القهوة معًا في الأسبوع الأول", "هفته اول با هم فیکا کنید", "İlk hafta birlikte fika yapın", "Випийте каву разом у перший тиждень", "Выпейте кофе вместе в первую неделю"], "fd_t3": ["Hjälp till med SchoolSoft och Västtrafiks app", "Ayudarle con SchoolSoft y la app de Västtrafik", "Help with SchoolSoft and the Västtrafik app", "ساعده في SchoolSoft وتطبيق Västtrafik", "در SchoolSoft و اپ Västtrafik کمکش کن", "SchoolSoft ve Västtrafik uygulamasında yardım et", "Допоможи з SchoolSoft і застосунком Västtrafik", "Помоги с SchoolSoft и приложением Västtrafik"], "fd_t4": ["Gå till ett Språkcafé eller event ihop", "Ir juntos a un Språkcafé o a un evento", "Go to a Språkcafé or an event together", "اذهبا معًا إلى مقهى اللغة أو فعالية", "با هم به کافه زبان یا یک رویداد بروید", "Birlikte bir Dil Kafesi’ne veya etkinliğe gidin", "Сходіть разом на мовне кафе чи подію", "Сходите вместе в языковое кафе или на мероприятие"], "fd_done": ["{n} av {m} klart", "{n} de {m} hecho", "{n} of {m} done", "تم {n} من {m}", "{n} از {m} انجام شد", "{m} görevden {n} tamam", "Виконано {n} з {m}", "Выполнено {n} из {m}"], "fd_thanks": ["Tack för att du är fadder! 💛", "¡Gracias por ser padrino o madrina! 💛", "Thanks for being a buddy! 💛", "شكرًا لكونك مرافقًا! 💛", "ممنون که همراه هستی! 💛", "Rehber arkadaş olduğun için teşekkürler! 💛", "Дякуємо, що ти наставник! 💛", "Спасибо, что ты наставник! 💛"], "fd_alldone": ["Bra jobbat! Alla uppgifter är klara 🎉", "¡Muy bien! Todas las tareas hechas 🎉", "Great job! All tasks done 🎉", "عمل رائع! أُنجزت كل المهام 🎉", "آفرین! همه کارها انجام شد 🎉", "Harika! Tüm görevler tamam 🎉", "Чудово! Усе виконано 🎉", "Отлично! Всё выполнено 🎉"], "fd_note": ["Uppdraget är frivilligt och personalen stöttar dig.", "Es voluntario y el personal te apoya.", "It’s voluntary and staff support you.", "المهمة تطوعية والطاقم يدعمك.", "این کار داوطلبانه است و کارکنان پشتیبانت هستند.", "Gönüllüdür ve personel seni destekler.", "Це добровільно, і персонал тебе підтримує.", "Это добровольно, и персонал тебя поддерживает."], "fd_chat": ["Skriv till {n}", "Escribir a {n}", "Message {n}", "راسل {n}", "به {n} پیام بده", "{n} kişisine yaz", "Написати: {n}", "Написать: {n}"], "pl_title": ["Klassråd och skolråd", "Consejo de clase y de escuela", "Class and school council", "مجلس الصف والمدرسة", "شورای کلاس و مدرسه", "Sınıf ve okul meclisi", "Класна й шкільна рада", "Классный и школьный совет"], "pl_desc": ["Din röst påverkar skolan. Röstningen är anonym.", "Tu voz influye en la escuela. La votación es anónima.", "Your voice shapes the school. Voting is anonymous.", "صوتك يؤثر في المدرسة. التصويت سري.", "صدای تو در مدرسه اثر دارد. رأی‌گیری ناشناس است.", "Sesin okulu etkiler. Oylama anonimdir.", "Твій голос впливає на школу. Голосування анонімне.", "Твой голос влияет на школу. Голосование анонимное."], "pl_school": ["Skolrådet", "Consejo escolar", "School council", "مجلس المدرسة", "شورای مدرسه", "Okul meclisi", "Шкільна рада", "Школьный совет"], "pl_class": ["Klassrådet", "Consejo de clase", "Class council", "مجلس الصف", "شورای کلاس", "Sınıf meclisi", "Класна рада", "Классный совет"], "pl_votes": ["{n} röster", "{n} votos", "{n} votes", "{n} صوتًا", "{n} رأی", "{n} oy", "Голосів: {n}", "Голосов: {n}"], "pl_closes": ["Stänger {d}", "Cierra el {d}", "Closes {d}", "يُغلق {d}", "پایان: {d}", "Kapanış: {d}", "Закривається: {d}", "Закрывается: {d}"], "pl_voted": ["Tack för din röst! 🗳️", "¡Gracias por votar! 🗳️", "Thanks for voting! 🗳️", "شكرًا لتصويتك! 🗳️", "ممنون از رأی تو! 🗳️", "Oy verdiğin için teşekkürler! 🗳️", "Дякуємо за голос! 🗳️", "Спасибо за голос! 🗳️"], "pl_change": ["Ändra röst", "Cambiar voto", "Change vote", "تغيير الصوت", "تغییر رأی", "Oyu değiştir", "Змінити голос", "Изменить голос"], "pl_yours": ["✓ Din röst", "✓ Tu voto", "✓ Your vote", "✓ صوتك", "✓ رأی تو", "✓ Oyun", "✓ Твій голос", "✓ Твой голос"]});
+/* Settings, notifications, onboarding translations */
+Object.assign(I18N,{"nt_title": ["Notiser", "Notificaciones", "Notifications", "الإشعارات", "اعلان‌ها", "Bildirimler", "Сповіщення", "Уведомления"], "nt_readall": ["Markera alla som lästa", "Marcar todo como leído", "Mark all as read", "تعليم الكل كمقروء", "همه را خوانده‌شده علامت بزن", "Tümünü okundu işaretle", "Позначити все як прочитане", "Отметить все как прочитанные"], "nt_empty": ["Inga notiser just nu", "No hay notificaciones", "No notifications right now", "لا توجد إشعارات الآن", "فعلاً اعلانی نیست", "Şu an bildirim yok", "Поки немає сповіщень", "Пока нет уведомлений"], "nt_sched_t": ["Schemaändring", "Cambio de horario", "Timetable change", "تغيير في الجدول", "تغییر برنامه", "Ders programı değişikliği", "Зміна розкладу", "Изменение расписания"], "nt_sched_d": ["Profiltid på fredag är inställd – ni har mentorstid i stället.", "La hora de perfil del viernes se cancela: tendréis tutoría en su lugar.", "Friday’s profile time is cancelled – you’ll have mentor time instead.", "وقت التخصص يوم الجمعة ملغى – سيكون لديكم وقت مع المرشد بدلًا منه.", "زمان پروفایل جمعه لغو شد – به جایش زمان منتور دارید.", "Cuma günkü profil saati iptal – yerine mentor saati var.", "Профільний час у п’ятницю скасовано – натомість буде час з ментором.", "Профильное время в пятницу отменено – вместо него будет время с наставником."], "nt_req_t": ["{n} vill chatta med dig", "{n} quiere chatear contigo", "{n} wants to chat with you", "{n} يريد الدردشة معك", "{n} می‌خواهد با تو گفتگو کند", "{n} seninle sohbet etmek istiyor", "{n} хоче поспілкуватися з тобою", "{n} хочет пообщаться с тобой"], "nt_tomorrow": ["Imorgon: {e}", "Mañana: {e}", "Tomorrow: {e}", "غدًا: {e}", "فردا: {e}", "Yarın: {e}", "Завтра: {e}", "Завтра: {e}"], "nt_soon": ["Snart: {e}", "Pronto: {e}", "Coming up: {e}", "قريبًا: {e}", "به‌زودی: {e}", "Yakında: {e}", "Незабаром: {e}", "Скоро: {e}"], "nt_poll_t": ["Rösta innan fredag 🗳️", "Vota antes del viernes 🗳️", "Vote before Friday 🗳️", "صوّت قبل الجمعة 🗳️", "قبل از جمعه رأی بده 🗳️", "Cumadan önce oy ver 🗳️", "Проголосуй до п’ятниці 🗳️", "Проголосуй до пятницы 🗳️"], "st_title": ["Inställningar", "Ajustes", "Settings", "الإعدادات", "تنظیمات", "Ayarlar", "Налаштування", "Настройки"], "st_open_d": ["Notiser, tema, integritet och konto", "Notificaciones, tema, privacidad y cuenta", "Notifications, theme, privacy and account", "الإشعارات والسمة والخصوصية والحساب", "اعلان‌ها، پوسته، حریم خصوصی و حساب", "Bildirimler, tema, gizlilik ve hesap", "Сповіщення, тема, конфіденційність і обліковий запис", "Уведомления, тема, конфиденциальность и аккаунт"], "st_n_chat": ["Chattmeddelanden", "Mensajes del chat", "Chat messages", "رسائل الدردشة", "پیام‌های گفتگو", "Sohbet mesajları", "Повідомлення чату", "Сообщения чата"], "st_n_events": ["Händelser och påminnelser", "Eventos y recordatorios", "Events and reminders", "الفعاليات والتذكيرات", "رویدادها و یادآوری‌ها", "Etkinlikler ve hatırlatmalar", "Події та нагадування", "События и напоминания"], "st_n_sched": ["Schemaändringar", "Cambios de horario", "Timetable changes", "تغييرات الجدول", "تغییرات برنامه", "Ders programı değişiklikleri", "Зміни розкладу", "Изменения расписания"], "st_n_school": ["Viktigt från skolan", "Avisos importantes de la escuela", "Important school notices", "إشعارات مهمة من المدرسة", "اطلاعیه‌های مهم مدرسه", "Okuldan önemli duyurular", "Важливі оголошення школи", "Важные объявления школы"], "st_always": ["Alltid på – för din säkerhet", "Siempre activado, por tu seguridad", "Always on – for your safety", "مفعّل دائمًا – من أجل سلامتك", "همیشه روشن – برای امنیت تو", "Her zaman açık – güvenliğin için", "Завжди ввімкнено – для твоєї безпеки", "Всегда включено – для твоей безопасности"], "st_look": ["Utseende", "Apariencia", "Appearance", "المظهر", "ظاهر", "Görünüm", "Вигляд", "Оформление"], "st_theme": ["Tema", "Tema", "Theme", "السمة", "پوسته", "Tema", "Тема", "Тема"], "st_auto": ["Automatiskt", "Automático", "Automatic", "تلقائي", "خودکار", "Otomatik", "Автоматично", "Автоматически"], "st_light": ["Ljust", "Claro", "Light", "فاتح", "روشن", "Açık", "Світла", "Светлая"], "st_dark": ["Mörkt", "Oscuro", "Dark", "داكن", "تیره", "Koyu", "Темна", "Тёмная"], "st_privacy": ["Integritet och säkerhet", "Privacidad y seguridad", "Privacy and safety", "الخصوصية والأمان", "حریم خصوصی و امنیت", "Gizlilik ve güvenlik", "Конфіденційність і безпека", "Конфиденциальность и безопасность"], "st_blocked": ["Blockerade personer", "Personas bloqueadas", "Blocked people", "الأشخاص المحظورون", "افراد مسدودشده", "Engellenen kişiler", "Заблоковані люди", "Заблокированные люди"], "st_none_blocked": ["Du har inte blockerat någon.", "No has bloqueado a nadie.", "You haven’t blocked anyone.", "لم تحظر أحدًا.", "کسی را مسدود نکرده‌ای.", "Kimseyi engellemedin.", "Ти нікого не заблокував(ла).", "Ты никого не заблокировал(а)."], "st_unblock": ["Avblockera", "Desbloquear", "Unblock", "إلغاء الحظر", "رفع مسدودیت", "Engeli kaldır", "Розблокувати", "Разблокировать"], "st_unblocked": ["{n} är avblockerad", "{n} está desbloqueado/a", "{n} is unblocked", "تم إلغاء حظر {n}", "{n} از مسدودیت خارج شد", "{n} engeli kaldırıldı", "{n}: розблоковано", "{n}: разблокирован(а)"], "st_mydata": ["Ladda ner mina data", "Descargar mis datos", "Download my data", "تنزيل بياناتي", "دانلود داده‌های من", "Verilerimi indir", "Завантажити мої дані", "Скачать мои данные"], "st_mydata_t": ["Vi skickar en kopia av dina data till din skolmejl inom 30 dagar.", "Te enviaremos una copia de tus datos a tu correo escolar en un plazo de 30 días.", "We’ll send a copy of your data to your school email within 30 days.", "سنرسل نسخة من بياناتك إلى بريدك المدرسي خلال 30 يومًا.", "یک نسخه از داده‌هایت را ظرف 30 روز به ایمیل مدرسه‌ات می‌فرستیم.", "Verilerinin bir kopyasını 30 gün içinde okul e-postana göndereceğiz.", "Ми надішлемо копію твоїх даних на шкільну пошту протягом 30 днів.", "Мы отправим копию твоих данных на школьную почту в течение 30 дней."], "st_policy": ["Integritetspolicy", "Política de privacidad", "Privacy policy", "سياسة الخصوصية", "سیاست حفظ حریم خصوصی", "Gizlilik politikası", "Політика конфіденційності", "Политика конфиденциальности"], "pp1": ["Vi sparar bara det som behövs: namn, skolmejl, kurs och det du själv fyller i.", "Solo guardamos lo necesario: nombre, correo escolar, curso y lo que tú rellenes.", "We only store what’s needed: name, school email, course and what you fill in yourself.", "نحفظ فقط ما هو ضروري: الاسم والبريد المدرسي والدورة وما تملؤه بنفسك.", "فقط چیزهای لازم را نگه می‌داریم: نام، ایمیل مدرسه، دوره و آنچه خودت پر می‌کنی.", "Yalnızca gerekeni saklarız: ad, okul e-postası, kurs ve kendi doldurduğun bilgiler.", "Ми зберігаємо лише необхідне: ім’я, шкільну пошту, курс і те, що ти заповнюєш сам(а).", "Мы храним только необходимое: имя, школьную почту, курс и то, что ты заполняешь сам(а)."], "pp2": ["Dina data lagras inom EU och säljs eller delas aldrig med annonsörer.", "Tus datos se guardan en la UE y nunca se venden ni se comparten con anunciantes.", "Your data is stored in the EU and never sold or shared with advertisers.", "تُخزَّن بياناتك داخل الاتحاد الأوروبي ولا تُباع أو تُشارك مع المعلنين أبدًا.", "داده‌هایت در اتحادیه اروپا نگهداری می‌شود و هرگز فروخته یا با تبلیغ‌کنندگان به اشتراک گذاشته نمی‌شود.", "Verilerin AB içinde saklanır ve asla satılmaz ya da reklamcılarla paylaşılmaz.", "Твої дані зберігаються в ЄС і ніколи не продаються й не передаються рекламодавцям.", "Твои данные хранятся в ЕС и никогда не продаются и не передаются рекламодателям."], "pp3": ["Du bestämmer vem som ser din profil och kan ladda ner eller radera dina data när du vill.", "Tú decides quién ve tu perfil y puedes descargar o borrar tus datos cuando quieras.", "You decide who sees your profile and can download or delete your data at any time.", "أنت تقرر من يرى ملفك ويمكنك تنزيل بياناتك أو حذفها متى شئت.", "خودت تعیین می‌کنی چه کسی پروفایلت را ببیند و هر وقت خواستی می‌توانی داده‌هایت را دانلود یا حذف کنی.", "Profilini kimin göreceğine sen karar verirsin; verilerini istediğin zaman indirebilir veya silebilirsin.", "Ти вирішуєш, хто бачить твій профіль, і можеш будь-коли завантажити чи видалити свої дані.", "Ты решаешь, кто видит твой профиль, и можешь в любой момент скачать или удалить свои данные."], "pp4": ["Rapporter i chatten granskas av personalen. Frågor? Mejla info@vingafolkhogskola.se.", "El personal revisa las denuncias del chat. ¿Dudas? Escribe a info@vingafolkhogskola.se.", "Chat reports are reviewed by staff. Questions? Email info@vingafolkhogskola.se.", "يراجع الطاقم البلاغات في الدردشة. أسئلة؟ راسل info@vingafolkhogskola.se.", "گزارش‌های گفتگو توسط کارکنان بررسی می‌شود. سؤال داری؟ به info@vingafolkhogskola.se ایمیل بزن.", "Sohbet bildirimleri personel tarafından incelenir. Soruların mı var? info@vingafolkhogskola.se adresine yaz.", "Скарги в чаті перевіряє персонал. Питання? Пиши на info@vingafolkhogskola.se.", "Жалобы в чате проверяет персонал. Вопросы? Пиши на info@vingafolkhogskola.se."], "pp_note": ["Prototyp: texten är ett exempel och måste godkännas av skolan.", "Prototipo: el texto es un ejemplo y debe aprobarlo la escuela.", "Prototype: this text is an example and must be approved by the school.", "نموذج أولي: هذا النص مثال ويجب أن توافق عليه المدرسة.", "نمونه اولیه: این متن یک نمونه است و باید مدرسه آن را تأیید کند.", "Prototip: bu metin bir örnektir ve okul tarafından onaylanmalıdır.", "Прототип: текст є прикладом і має бути затверджений школою.", "Прототип: текст является примером и должен быть утверждён школой."], "st_help": ["Hjälp och kontakt", "Ayuda y contacto", "Help and contact", "المساعدة والتواصل", "راهنما و تماس", "Yardım ve iletişim", "Допомога та контакти", "Помощь и контакты"], "st_report": ["Rapportera ett problem i appen", "Informar de un problema en la app", "Report a problem with the app", "الإبلاغ عن مشكلة في التطبيق", "گزارش مشکل برنامه", "Uygulamadaki bir sorunu bildir", "Повідомити про проблему в застосунку", "Сообщить о проблеме в приложении"], "st_intro": ["Visa introduktionen igen", "Ver la introducción otra vez", "Show the introduction again", "عرض المقدمة مرة أخرى", "نمایش دوباره معرفی", "Tanıtımı tekrar göster", "Показати вступ знову", "Показать вступление снова"], "st_account": ["Konto", "Cuenta", "Account", "الحساب", "حساب", "Hesap", "Обліковий запис", "Аккаунт"], "st_delete": ["Radera mitt konto", "Borrar mi cuenta", "Delete my account", "حذف حسابي", "حذف حساب من", "Hesabımı sil", "Видалити мій обліковий запис", "Удалить мой аккаунт"], "st_delete_t": ["Vill du radera ditt konto?", "¿Quieres borrar tu cuenta?", "Delete your account?", "هل تريد حذف حسابك؟", "می‌خواهی حسابت را حذف کنی؟", "Hesabını silmek istiyor musun?", "Видалити обліковий запис?", "Удалить аккаунт?"], "st_delete_d": ["Din profil, dina chattar och dina inlägg raderas inom 30 dagar. Det går inte att ångra. Ditt skolkonto i Google påverkas inte.", "Tu perfil, tus chats y tus publicaciones se borrarán en un plazo de 30 días. No se puede deshacer. Tu cuenta escolar de Google no se ve afectada.", "Your profile, chats and posts will be deleted within 30 days. This can’t be undone. Your Google school account is not affected.", "سيتم حذف ملفك ودردشاتك ومنشوراتك خلال 30 يومًا. لا يمكن التراجع عن ذلك. لن يتأثر حسابك المدرسي في Google.", "پروفایل، گفتگوها و پست‌هایت ظرف 30 روز حذف می‌شوند. این کار برگشت‌پذیر نیست. حساب مدرسه‌ات در Google تغییری نمی‌کند.", "Profilin, sohbetlerin ve gönderilerin 30 gün içinde silinir. Bu geri alınamaz. Google okul hesabın etkilenmez.", "Твій профіль, чати й дописи буде видалено протягом 30 днів. Це не можна скасувати. Шкільний обліковий запис Google не зміниться.", "Твой профиль, чаты и записи будут удалены в течение 30 дней. Это нельзя отменить. Школьный аккаунт Google не изменится."], "st_delete_ok": ["Ja, radera mitt konto", "Sí, borrar mi cuenta", "Yes, delete my account", "نعم، احذف حسابي", "بله، حسابم را حذف کن", "Evet, hesabımı sil", "Так, видалити", "Да, удалить"], "st_deleted": ["Ditt konto raderas. Tack för den här tiden! 💛", "Tu cuenta se está borrando. ¡Gracias por este tiempo! 💛", "Your account is being deleted. Thank you for your time! 💛", "جارٍ حذف حسابك. شكرًا على هذا الوقت! 💛", "حسابت در حال حذف است. ممنون از این مدت! 💛", "Hesabın siliniyor. Bu süre için teşekkürler! 💛", "Обліковий запис видаляється. Дякуємо за цей час! 💛", "Аккаунт удаляется. Спасибо за это время! 💛"], "st_cancel": ["Avbryt", "Cancelar", "Cancel", "إلغاء", "لغو", "İptal", "Скасувати", "Отмена"], "st_version": ["Vinga Connect 1.0 (prototyp)", "Vinga Connect 1.0 (prototipo)", "Vinga Connect 1.0 (prototype)", "Vinga Connect 1.0 (نموذج أولي)", "Vinga Connect 1.0 (نمونه اولیه)", "Vinga Connect 1.0 (prototip)", "Vinga Connect 1.0 (прототип)", "Vinga Connect 1.0 (прототип)"], "ob_skip": ["Hoppa över", "Saltar", "Skip", "تخطي", "رد شدن", "Atla", "Пропустити", "Пропустить"], "ob_start": ["Kom igång! 🚀", "¡Empezar! 🚀", "Let’s go! 🚀", "لنبدأ! 🚀", "شروع کنیم! 🚀", "Hadi başlayalım! 🚀", "Почнімо! 🚀", "Начнём! 🚀"], "ob1_t": ["Välkommen till Vinga Connect!", "¡Bienvenido a Vinga Connect!", "Welcome to Vinga Connect!", "أهلًا بك في Vinga Connect!", "به Vinga Connect خوش آمدی!", "Vinga Connect’e hoş geldin!", "Ласкаво просимо до Vinga Connect!", "Добро пожаловать в Vinga Connect!"], "ob1_d": ["Välj det språk du vill använda i appen. Du kan alltid ändra det senare.", "Elige el idioma que quieres usar en la app. Puedes cambiarlo cuando quieras.", "Choose the language you want to use in the app. You can change it any time.", "اختر اللغة التي تريد استخدامها في التطبيق. يمكنك تغييرها في أي وقت.", "زبانی را که می‌خواهی در برنامه استفاده کنی انتخاب کن. هر وقت خواستی می‌توانی تغییرش دهی.", "Uygulamada kullanmak istediğin dili seç. İstediğin zaman değiştirebilirsin.", "Обери мову застосунку. Її завжди можна змінити.", "Выбери язык приложения. Его всегда можно изменить."], "ob2_t": ["Hela din skoldag på ett ställe", "Todo tu día de clase en un solo lugar", "Your whole school day in one place", "يومك الدراسي كله في مكان واحد", "همه روز مدرسه‌ات در یک جا", "Tüm okul günün tek bir yerde", "Увесь навчальний день в одному місці", "Весь учебный день в одном месте"], "ob2_a": ["Se din sal, ditt schema och spårvagnen hem", "Mira tu aula, tu horario y el tranvía a casa", "See your room, your timetable and the tram home", "شاهد قاعتك وجدولك والترام إلى البيت", "کلاس، برنامه و ترامِ خانه را ببین", "Sınıfını, ders programını ve eve giden tramvayı gör", "Дивись аудиторію, розклад і трамвай додому", "Смотри аудиторию, расписание и трамвай домой"], "ob2_b": ["Hitta språkkompisar och chatta på ditt språk", "Encuentra compañeros de idiomas y chatea en tu idioma", "Find language buddies and chat in your language", "اعثر على رفاق لغة ودردش بلغتك", "هم‌زبان پیدا کن و به زبان خودت گفتگو کن", "Dil arkadaşları bul ve kendi dilinde sohbet et", "Знаходь мовних партнерів і спілкуйся своєю мовою", "Находи языковых партнёров и общайся на своём языке"], "ob2_c": ["Lär dig svenska varje dag – med ljud och översättning", "Aprende sueco cada día, con audio y traducción", "Learn Swedish every day – with audio and translation", "تعلّم السويدية كل يوم – بالصوت والترجمة", "هر روز سوئدی یاد بگیر – با صدا و ترجمه", "Her gün İsveççe öğren – sesli ve çevirili", "Вивчай шведську щодня – з озвученням і перекладом", "Учи шведский каждый день – с озвучкой и переводом"], "ob3_t": ["Berätta lite om dig", "Cuéntanos un poco sobre ti", "Tell us a little about you", "أخبرنا قليلًا عن نفسك", "کمی از خودت بگو", "Bize biraz kendinden bahset", "Розкажи трохи про себе", "Расскажи немного о себе"], "ob3_d": ["Vi använder det för att hitta språkkompisar åt dig. Du kan ändra det i din profil.", "Lo usamos para encontrarte compañeros de idiomas. Puedes cambiarlo en tu perfil.", "We use it to find language buddies for you. You can change it in your profile.", "نستخدم ذلك لإيجاد رفاق لغة لك. يمكنك تغييره في ملفك.", "از آن برای پیدا کردن هم‌زبان برایت استفاده می‌کنیم. می‌توانی در پروفایلت تغییرش دهی.", "Bunu sana dil arkadaşları bulmak için kullanıyoruz. Profilinden değiştirebilirsin.", "Ми використаємо це, щоб знайти тобі мовних партнерів. Змінити можна в профілі.", "Мы используем это, чтобы найти тебе языковых партнёров. Изменить можно в профиле."], "ob4_t": ["Missa inget viktigt", "No te pierdas nada importante", "Don’t miss anything important", "لا تفوّت شيئًا مهمًا", "چیز مهمی را از دست نده", "Önemli hiçbir şeyi kaçırma", "Не пропусти нічого важливого", "Не пропусти ничего важного"], "ob4_d": ["Få notiser om inställda lektioner, nya meddelanden och händelser. Du väljer själv i inställningarna.", "Recibe avisos de clases canceladas, mensajes nuevos y eventos. Tú eliges en los ajustes.", "Get notified about cancelled lessons, new messages and events. You choose in settings.", "احصل على إشعارات بالدروس الملغاة والرسائل الجديدة والفعاليات. أنت تختار في الإعدادات.", "برای کلاس‌های لغوشده، پیام‌های جدید و رویدادها اعلان بگیر. خودت در تنظیمات انتخاب می‌کنی.", "İptal edilen dersler, yeni mesajlar ve etkinlikler için bildirim al. Ayarlardan sen seçersin.", "Отримуй сповіщення про скасовані уроки, нові повідомлення й події. Ти обираєш у налаштуваннях.", "Получай уведомления об отменённых уроках, новых сообщениях и событиях. Ты выбираешь в настройках."], "ob_allow": ["🔔 Tillåt notiser", "🔔 Permitir notificaciones", "🔔 Allow notifications", "🔔 السماح بالإشعارات", "🔔 اجازه به اعلان‌ها", "🔔 Bildirimlere izin ver", "🔔 Дозволити сповіщення", "🔔 Разрешить уведомления"], "ob_later": ["Inte nu", "Ahora no", "Not now", "ليس الآن", "حالا نه", "Şimdi değil", "Не зараз", "Не сейчас"], "ob_allowed": ["Notiser är på ✓", "Notificaciones activadas ✓", "Notifications on ✓", "الإشعارات مفعّلة ✓", "اعلان‌ها روشن است ✓", "Bildirimler açık ✓", "Сповіщення ввімкнено ✓", "Уведомления включены ✓"], "ob_denied": ["Okej! Du kan slå på dem i Inställningar.", "¡Vale! Puedes activarlas en Ajustes.", "Okay! You can turn them on in Settings.", "حسنًا! يمكنك تفعيلها من الإعدادات.", "باشه! می‌توانی در تنظیمات روشنشان کنی.", "Tamam! Ayarlardan açabilirsin.", "Гаразд! Їх можна ввімкнути в налаштуваннях.", "Хорошо! Их можно включить в настройках."]});
 function t(k,v){var r=I18N[k];var s=r?(r[LI[S.lang]]||r[2]||r[0]):k;if(v){for(var x in v){s=s.split('{'+x+'}').join(v[x])}}return s}
 
 /* ================= DATA ================= */
@@ -1423,7 +1539,7 @@ function renderAll(){
  $('#langList').innerHTML=langBtns('lrow');
  if(!S.logged)return;
  $('#hdrLang').textContent=S.lang.toUpperCase();
- renderPuls();renderStudier();renderGuide();renderProfil();renderAbout();renderChat();renderEvents();renderFika();renderNew();renderFadder();renderPolls();renderAvatars();
+ renderPuls();renderStudier();renderGuide();renderProfil();renderAbout();renderChat();renderEvents();renderFika();renderNew();renderFadder();renderPolls();renderBell();renderOnboard();renderAvatars();
 }
 function renderPuls(){
  var c=COURSES[S.course],dstr='';
@@ -1541,7 +1657,7 @@ function setTab(tab){
  $('#scrApp').setAttribute('data-tab',tab);
  $('#content').scrollTop=0;
 }
-function enterApp(){S.logged=true;initSocial();showScreen('scrApp');renderAll();setTab('puls');flipBoard()}
+function enterApp(){S.logged=true;initSocial();showScreen('scrApp');renderAll();setTab('puls');flipBoard();if(!store.get('vc_onboarded'))showOnboard(0);setTimeout(demoPush,7000)}
 function doLogin(demo){
  var f=$('#emailField'),err=$('#loginErr'),email;
  if(demo){email=DEFAULT_EMAIL;$('#email').value=email}
@@ -1552,7 +1668,7 @@ function doLogin(demo){
  var b=$('#loginBtn');b.disabled=true;b.innerHTML='<span class="spin"></span><span>'+t('checking')+'</span>';
  setTimeout(function(){b.disabled=false;b.innerHTML='<span data-i18n="login_btn">'+t('login_btn')+'</span>';enterApp()},550);
 }
-function logout(){closeOv();closeStory();closeChat();S.logged=false;S.room=null;showScreen('scrLogin');renderAll()}
+function logout(){closeOv();closeStory();closeChat();$('#onboard').hidden=true;$('#push').hidden=true;S.logged=false;S.room=null;showScreen('scrLogin');renderAll()}
 
 /* ================= OVERLAYS ================= */
 function openOv(id){closeOv();$('#'+id).classList.add('on');var f=$('#'+id+' .x');if(f)setTimeout(function(){try{f.focus({preventScroll:true})}catch(e){}},50)}
@@ -1734,7 +1850,7 @@ function txTr(k){var a=CTX[k];return a?fillMe(a[S.lang==='sv'?2:LI[S.lang]]):''}
 function fillMe(s){return String(s).split('{me}').join(firstName())}
 function initSocial(){
  S.profile={speaks:['es','en'],wants:['sv','ar'],interests:['it','fotboll','mat'],askme:'Datorer, appar och fotboll',hello:'Hej! Jag heter '+firstName()+'. Jag gillar teknik, fotboll och att laga mat.',vis:'all'};
- S.blocked={};S.replyN=0;S.openChat=null;S.votes={};S.fadder={on:false,tasks:{}};S.going={};S.fika={opt:false,match:null,n:0,spinning:false};
+ S.blocked={};S.replyN=0;S.openChat=null;S.notif=JSON.parse(JSON.stringify(NOTIF_DEF));S.readN={};S.extraN=[];S.demoPushed=0;S.votes={};S.fadder={on:false,tasks:{}};S.going={};S.fika={opt:false,match:null,n:0,spinning:false};
  S.chats=[
   {id:'class',type:'group',members:21,mod:1,unread:2,msgs:[{f:'teacher',a:'Läraren',k:'m_class1',time:'08:05'},{f:'amina',k:'m_class2',time:'08:12'},{f:'carlos',k:'m_class3',time:'08:14'}]},
   {id:'amina',type:'dm',p:'amina',unread:1,msgs:[{f:'amina',k:'m_amina1',time:'09:40'}]},
@@ -1778,6 +1894,7 @@ function renderChat(){
   return '<button class="crow" data-act="chat-open" data-id="'+ch.id+'">'+chatAv(ch,46)+'<span class="ct"><b>'+esc(chatName(ch))+(ch.muted?' 🔕':'')+'</b><small dir="auto">'+esc(msgPreview(last))+'</small></span><span class="cm"><bdi>'+(last?last.time:'')+'</bdi>'+(ch.unread?'<span class="ubadge">'+ch.unread+'</span>':'')+'</span></button>'}).join('');
  var n=S.requests.length;S.chats.forEach(function(ch){if(!ch.muted)n+=ch.unread||0});
  var nb=$('#navBadge');nb.hidden=!n;nb.textContent=n;
+ renderBell();
  renderNew();
  if(S.openChat)renderChatView();
 }
@@ -1814,7 +1931,7 @@ function afterSend(ch){
 }
 function replySoon(ch){
  ch.typing=true;renderChat();
- setTimeout(function(){if(!chatById(ch.id)||S.blocked[ch.p])return;ch.typing=false;var k=['r1','r2','r3'][S.replyN++%3];pushMsg(ch,{f:ch.p,k:k});if(S.openChat!==ch.id)ch.unread=(ch.unread||0)+1;renderChat()},1500);
+ setTimeout(function(){if(!chatById(ch.id)||S.blocked[ch.p])return;ch.typing=false;var k=['r1','r2','r3'][S.replyN++%3];pushMsg(ch,{f:ch.p,k:k});if(S.openChat!==ch.id){ch.unread=(ch.unread||0)+1;notifyChat(ch,k)}renderChat()},1500);
 }
 function renderAbout(){
  var pr=S.profile;if(!pr)return;
@@ -1855,7 +1972,7 @@ Object.assign(CTX,{"ib1": ["Vad är din favoritmat?", "¿Cuál es tu comida favo
 var EVENTS=[
  {id:'lib',e:'📚',acc:'var(--lilac)',time:'08:45',place:'Stadsbiblioteket',going:14,cls:6,who:['amina','carlos','sara']},
  {id:'cafe',e:'☕',acc:'var(--gold)',time:'15:00–16:30',place:'Bibliotek / Studiehörna',going:23,cls:4,who:['olena','amina','hodan','erik']},
- {id:'fot',e:'⚽',acc:'var(--teal-soft)',time:'15:00',place:'Frihamnen',going:11,cls:2,who:['erik','mehmet','carlos']},
+ {id:'fot',e:'⚽',acc:'#8FD1BF',time:'15:00',place:'Frihamnen',going:11,cls:2,who:['erik','mehmet','carlos']},
  {id:'gem',e:'🎉',acc:'var(--pink)',time:'09:00–15:00',place:'Vinga Folkhögskola',going:87,cls:15,who:['lina','hodan','mehmet','olena','sara']},
  {id:'lucia',e:'🕯️',acc:'var(--orange)',time:'09:30',place:'Matsalen',going:64,cls:12,who:['erik','lina','amina','hodan']}
 ];
@@ -1971,6 +2088,92 @@ function renderPolls(){
    '<div class="pl-f"><span>'+t('pl_votes',{n:total})+'</span>'+(v!==undefined?'<span><b>'+t('pl_yours')+'</b> · <button data-act="pl-change" data-id="'+pl.id+'">'+t('pl_change')+'</button></span>':'')+'</div></article>';
  }).join('');
 }
+
+/* ================= THEME, NOTIFICATIONS, SETTINGS, ONBOARDING ================= */
+function applyTheme(){
+ var th=store.get('vc_theme')||'auto',dark=th==='dark';
+ if(th==='auto'){try{dark=window.matchMedia('(prefers-color-scheme: dark)').matches}catch(e){dark=false}}
+ document.documentElement.setAttribute('data-theme',dark?'dark':'light');
+ var m=document.querySelector('meta[name=theme-color]');if(m)m.setAttribute('content',dark?'#16151B':'#FAF6EE');
+}
+try{var _mq=window.matchMedia('(prefers-color-scheme: dark)');if(_mq.addEventListener)_mq.addEventListener('change',applyTheme);else if(_mq.addListener)_mq.addListener(applyTheme)}catch(e){}
+applyTheme();
+var NOTIF_DEF={chat:true,events:true,sched:true,school:true};
+function baseNotifs(){
+ var out=[],lib=null;EVENTS.forEach(function(e){if(e.id==='lib')lib=e});
+ out.push({id:'n_school',cat:'school',ic:'📢',bg:'var(--gold-soft)',title:t('important'),body:t('important_msg'),time:'07:30',go:{tab:'puls'}});
+ out.push({id:'n_sched',cat:'sched',ic:'🗓️',bg:'var(--lilac-soft)',title:t('nt_sched_t'),body:t('nt_sched_d'),time:'07:05',go:{tab:'puls'}});
+ if(chatById('amina'))out.push({id:'n_amina',cat:'chat',ic:'💬',bg:'var(--orange-soft)',title:PEOPLE.amina.n,body:txSv('m_amina1'),time:'09:40',go:{chat:'amina'}});
+ S.requests.forEach(function(r){if(!S.blocked[r.p])out.push({id:'n_req_'+r.p,cat:'chat',ic:'👋',bg:'var(--teal-soft)',title:t('nt_req_t',{n:PEOPLE[r.p].n}),body:txSv(r.k),time:'08:50',go:{tab:'chat'}})});
+ var d=eventDate(lib),tm=addDays(new Date(),1);tm.setHours(0,0,0,0);
+ out.push({id:'n_ev_lib',cat:'events',ic:'📚',bg:'var(--lilac-soft)',title:t(d.getTime()===tm.getTime()?'nt_tomorrow':'nt_soon',{e:tx('ev_lib_t')}),body:lib.time+', '+lib.place,time:'06:00',go:{ev:'lib'}});
+ if(S.votes&&S.votes.p1===undefined)out.push({id:'n_poll',cat:'events',ic:'🗳️',bg:'var(--pink-soft)',title:t('nt_poll_t'),body:txSv('pq1'),time:'06:00',go:{polls:1}});
+ return out;
+}
+function notifs(){if(!S.notif)return [];return (S.extraN||[]).concat(baseNotifs()).filter(function(n){return n.cat==='school'||S.notif[n.cat]})}
+function renderBell(){var b=$('#bellBadge');if(!b||!S.readN)return;var n=notifs().filter(function(x){return !S.readN[x.id]}).length;b.hidden=!n;b.textContent=n}
+function renderNotifs(){
+ var list=notifs(),box=$('#ntBody');if(!box)return;
+ box.innerHTML='<div class="nt-top"><button class="st-mini" data-act="nt-readall">✓ '+t('nt_readall')+'</button><button class="st-mini" data-act="open-settings">⚙️ '+t('st_title')+'</button></div>'+
+  (list.length?list.map(function(n){var rd=!!S.readN[n.id];return '<button class="nrow'+(rd?' read':'')+'" data-act="nt-open" data-id="'+n.id+'"><span class="ni" style="--c:'+n.bg+'">'+n.ic+'</span><span class="nt"><b>'+esc(n.title)+'</b><small dir="auto">'+esc(n.body)+'</small></span><time><bdi>'+n.time+'</bdi>'+(rd?'':'<span class="udot" aria-hidden="true"></span>')+'</time></button>'}).join(''):'<p class="empty">'+t('nt_empty')+'</p>');
+}
+function goNotif(go){
+ if(go.chat){setTab('chat');openChat(go.chat)}
+ else if(go.ev){setTab('puls');OPEN_EV=go.ev;renderEventSheet();openOv('ovEvent')}
+ else if(go.polls){setTab('puls');setTimeout(function(){var p=$('#polls');if(p)p.scrollIntoView({block:'start'})},60)}
+ else setTab(go.tab||'puls');
+}
+var pushTm;
+function showPush(title,body,go){
+ var p=$('#push');if(!p||!S.logged||!$('#onboard').hidden)return;
+ $('#pushT').textContent=title;$('#pushB').textContent=body;$('#pushTime').textContent=t('now');p._go=go;
+ p.hidden=false;p.classList.remove('anim');void p.offsetWidth;p.classList.add('anim');
+ clearTimeout(pushTm);pushTm=setTimeout(function(){p.hidden=true},4500);
+}
+function notifyChat(ch,k){
+ if(!S.notif||!S.notif.chat)return;
+ var nm=PEOPLE[ch.p].n,body=txSv(k);
+ S.extraN.unshift({id:'x'+Date.now(),cat:'chat',ic:'💬',bg:'var(--orange-soft)',title:nm,body:body,time:hhmm(new Date()),go:{chat:ch.id}});
+ showPush(nm,body,{chat:ch.id});renderBell();
+}
+function demoPush(){var a=chatById('amina');if(S.logged&&!S.demoPushed&&S.notif.chat&&a&&a.unread&&!S.openChat){S.demoPushed=1;showPush(PEOPLE.amina.n,txSv('m_amina1'),{chat:'amina'})}}
+function renderSettings(){
+ var box=$('#setBody');if(!box||!S.notif)return;
+ var th=store.get('vc_theme')||'auto';
+ var sw=function(k,dis){var on=!!S.notif[k];return '<button class="switch" role="switch" aria-checked="'+on+'" aria-label="'+esc(t('st_n_'+k))+'" data-act="st-notif" data-k="'+k+'"'+(dis?' disabled':'')+'></button>'};
+ var row=function(lbl,right,sub){return '<div class="st-row"><span class="sl">'+lbl+(sub?'<small>'+sub+'</small>':'')+'</span>'+right+'</div>'};
+ var link=function(act,lbl,sub,extra,cls){return '<button class="st-row'+(cls?' '+cls:'')+'" data-act="'+act+'"'+(extra||'')+'><span class="sl">'+lbl+(sub?'<small>'+sub+'</small>':'')+'</span><span class="ch2" aria-hidden="true">›</span></button>'};
+ var blocked=Object.keys(S.blocked).filter(function(id){return S.blocked[id]});
+ var vis={all:'p_vis_all','class':'p_vis_class',none:'p_vis_none'}[S.profile.vis];
+ var L=LANGS[LI[S.lang]].n;
+ box.innerHTML=
+  '<p class="st-sec">🔔 '+t('nt_title')+'</p><div class="st-group">'+row(t('st_n_chat'),sw('chat'))+row(t('st_n_events'),sw('events'))+row(t('st_n_sched'),sw('sched'))+row(t('st_n_school'),sw('school',1),t('st_always'))+'</div>'+
+  '<p class="st-sec">🎨 '+t('st_look')+'</p><div class="st-group"><div class="st-row"><span class="sl">'+t('st_theme')+'</span></div><div class="theme-seg">'+['auto','light','dark'].map(function(v){return '<button class="'+(th===v?'on':'')+'" data-act="st-theme" data-v="'+v+'" aria-pressed="'+(th===v)+'">'+t('st_'+v)+'</button>'}).join('')+'</div>'+link('open-lang','🌍 '+t('lang_lbl'),esc(L))+'</div>'+
+  '<p class="st-sec">🛡️ '+t('st_privacy')+'</p><div class="st-group">'+link('profile-edit','🔒 '+t('p_visible'),t(vis))+
+   '<div class="st-row"><span class="sl">⛔ '+t('st_blocked')+(blocked.length?'':'<small>'+t('st_none_blocked')+'</small>')+'</span></div>'+
+   blocked.map(function(id){return '<div class="st-row">'+personAv(id,34)+'<span class="sl">'+esc(PEOPLE[id].n)+'</span><button class="st-mini" data-act="st-unblock" data-p="'+id+'">'+t('st_unblock')+'</button></div>'}).join('')+
+   link('st-mydata','📦 '+t('st_mydata'))+
+   '<details class="pol"><summary class="st-row"><span class="sl">📜 '+t('st_policy')+'</span><span class="ch2" aria-hidden="true">›</span></summary><ul><li>'+t('pp1')+'</li><li>'+t('pp2')+'</li><li>'+t('pp3')+'</li><li>'+t('pp4')+'</li></ul><p class="pn">'+t('pp_note')+'</p></details>'+
+   link('chat-rules','💬 '+t('c_rules'))+'</div>'+
+  '<p class="st-sec">💁 '+t('st_help')+'</p><div class="st-group"><a class="st-row" href="mailto:info@vingafolkhogskola.se"><span class="sl">✉️ '+t('k_contact')+'<small dir="ltr">info@vingafolkhogskola.se</small></span><span class="ch2" aria-hidden="true">›</span></a><a class="st-row" href="mailto:info@vingafolkhogskola.se?subject=Vinga%20Connect"><span class="sl">🐞 '+t('st_report')+'</span><span class="ch2" aria-hidden="true">›</span></a>'+link('st-intro','👋 '+t('st_intro'))+'</div>'+
+  '<p class="st-sec">👤 '+t('st_account')+'</p><div class="st-group">'+link('logout','↩ '+t('logout'))+link('st-delete','🗑️ '+t('st_delete'),'','','danger')+'</div>'+
+  '<p class="st-ver">'+t('st_version')+'</p>';
+}
+var OB={step:0};
+function showOnboard(s){OB={step:s||0};$('#onboard').hidden=false;renderOnboard()}
+function obLangs(key){return Object.keys(LANG_NAMES).map(function(c){var on=S.profile[key].indexOf(c)>=0;return '<button class="pick'+(on?' on':'')+'" data-act="ob-lang" data-k="'+key+'" data-v="'+c+'" aria-pressed="'+on+'" lang="'+c+'">'+esc(LANG_NAMES[c])+'</button>'}).join('')}
+function renderOnboard(){
+ var el=$('#onboard');if(!el||el.hidden)return;var s=OB.step,b='';
+ if(s===0)b='<div class="brand big">'+logoHTML()+'</div><h2>'+t('ob1_t')+'</h2><p class="d">'+t('ob1_d')+'</p><div class="langgrid">'+langBtns('lrow')+'</div>';
+ else if(s===1)b='<div class="onb-big" aria-hidden="true">🧭</div><h2>'+t('ob2_t')+'</h2>'+[['📅','var(--pink-soft)','ob2_a'],['💬','var(--orange-soft)','ob2_b'],['🔊','var(--lilac-soft)','ob2_c']].map(function(f){return '<div class="onb-feat"><span class="i" style="--c:'+f[1]+'">'+f[0]+'</span><span>'+t(f[2])+'</span></div>'}).join('');
+ else if(s===2)b='<div class="onb-big" aria-hidden="true">🙋</div><h2>'+t('ob3_t')+'</h2><p class="d">'+t('ob3_d')+'</p><span class="fl">'+t('p_speak')+'</span><div class="opts">'+obLangs('speaks')+'</div><span class="fl">'+t('p_learn')+'</span><div class="opts">'+obLangs('wants')+'</div>';
+ else b='<div class="onb-big" aria-hidden="true">🔔</div><h2>'+t('ob4_t')+'</h2><p class="d">'+t('ob4_d')+'</p>'+(OB.asked?'<p class="ob-ok">'+t(OB.allowed?'ob_allowed':'ob_denied')+'</p>':'<div class="row2"><button class="btn primary" data-act="ob-allow">'+t('ob_allow')+'</button><button class="btn light" style="border:2px solid var(--line)" data-act="ob-later">'+t('ob_later')+'</button></div>')+'<p class="note2">🛡️ '+t('p_privacy')+'</p>';
+ $('#obBody').innerHTML=b;
+ $('#obDots').innerHTML=[0,1,2,3].map(function(i){return '<i class="'+(i===s?'on':'')+'"></i>'}).join('');
+ $('#obNext').textContent=s===3?t('ob_start'):t('k_next');
+ $('#obSkip').style.visibility=s===3?'hidden':'visible';
+}
+function finishOnboard(){$('#onboard').hidden=true;store.set('vc_onboarded','1');renderAbout();renderChat();renderBell();setTimeout(demoPush,2500)}
 var ACT={
  lang:function(el){setLang(el.getAttribute('data-l'))},
  'open-lang':function(){openOv('ovLang')},
@@ -1994,11 +2197,28 @@ var ACT={
  board:function(el){S.board=el.getAttribute('data-b');renderBoard()},
  room:function(el){var r=el.getAttribute('data-r');S.room=S.room===r?null:r;renderGuide();var g=$('.room[data-r="'+r+'"]');if(g&&S.room)try{g.focus({preventScroll:true})}catch(e){}},
  'sick-open':openSick,
+ 'open-notifs':function(){renderNotifs();openOv('ovNotifs')},
+ 'nt-open':function(el){var id=el.getAttribute('data-id'),n=null;notifs().forEach(function(x){if(x.id===id)n=x});if(!n)return;S.readN[id]=1;renderBell();closeOv();goNotif(n.go)},
+ 'nt-readall':function(){notifs().forEach(function(x){S.readN[x.id]=1});renderNotifs();renderBell()},
+ 'push-open':function(){var p=$('#push'),go=p._go;p.hidden=true;if(go)goNotif(go)},
+ 'open-settings':function(){renderSettings();openOv('ovSettings')},
+ 'st-notif':function(el){var k=el.getAttribute('data-k');if(k==='school')return;S.notif[k]=!S.notif[k];renderSettings();renderBell()},
+ 'st-theme':function(el){store.set('vc_theme',el.getAttribute('data-v'));applyTheme();renderSettings()},
+ 'st-unblock':function(el){var id=el.getAttribute('data-p');delete S.blocked[id];renderSettings();renderChat();renderFika();toast(t('st_unblocked',{n:PEOPLE[id].n}))},
+ 'st-mydata':function(){toast(t('st_mydata_t'))},
+ 'st-intro':function(){closeOv();showOnboard(0)},
+ 'st-delete':function(){openOv('ovDelete')},
+ 'st-delete-ok':function(){closeOv();store.set('vc_onboarded','');logout();toast(t('st_deleted'))},
+ 'ob-next':function(){if(OB.step<3){OB.step++;renderOnboard()}else finishOnboard()},
+ 'ob-skip':finishOnboard,
+ 'ob-allow':function(){OB.asked=1;OB.allowed=1;S.notif=JSON.parse(JSON.stringify(NOTIF_DEF));renderOnboard();renderBell()},
+ 'ob-later':function(){OB.asked=1;OB.allowed=0;S.notif={chat:false,events:false,sched:false,school:true};renderOnboard();renderBell()},
+ 'ob-lang':function(el){var k=el.getAttribute('data-k'),v=el.getAttribute('data-v'),a=S.profile[k],i=a.indexOf(v);if(i>=0)a.splice(i,1);else a.push(v);var b=$('#obBody'),sc=b.scrollTop;renderOnboard();b.scrollTop=sc},
  'nw-hi':function(el){var id=el.getAttribute('data-p');if(chatById(id))openChat(id);else startDM(id,'q_welcome')},
  'fd-join':function(){S.fadder.on=true;S.fadder.buddy=buddyFor();renderFadder();toast(t('fd_thanks'))},
  'fd-leave':function(){S.fadder={on:false,tasks:{}};renderFadder();toast(t('fd_left'))},
  'fd-task':function(el){var k=el.getAttribute('data-k');S.fadder.tasks[k]=!S.fadder.tasks[k];renderFadder();if(FD_TASKS.every(function(x){return S.fadder.tasks[x]}))toast(t('fd_alldone'))},
- 'pl-vote':function(el){S.votes[el.getAttribute('data-id')]=+el.getAttribute('data-i');renderPolls();toast(t('pl_voted'))},
+ 'pl-vote':function(el){S.votes[el.getAttribute('data-id')]=+el.getAttribute('data-i');renderPolls();renderBell();toast(t('pl_voted'))},
  'pl-change':function(el){delete S.votes[el.getAttribute('data-id')];renderPolls()},
  'ev-open':function(el){OPEN_EV=el.getAttribute('data-id');renderEventSheet();openOv('ovEvent')},
  'ev-join':function(el){var id=el.getAttribute('data-id');S.going[id]=!S.going[id];renderEvents();if(OPEN_EV===id&&$('#ovEvent').classList.contains('on'))renderEventSheet();toast(S.going[id]?t('ev_joined_t'):t('ev_left'))},

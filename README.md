@@ -15,6 +15,11 @@ Todo está en un único archivo, [`index.html`](index.html): HTML, CSS y JavaScr
 | **Guide** | Plano interactivo de la planta 3, aviso de ausencia (Sjukanmälan/VAB), "Bra att veta", contacto de la escuela y guía de Gotemburgo con los logos oficiales |
 | **Profil** | Carné de estudiante con QR, "Sobre mí" (idiomas, intereses, privacidad), programa de padrinos, estudio de foto y avatar, e idiomas |
 
+**Además:**
+- **Ajustes:** notificaciones por tipo, tema, idioma, quién ve tu perfil, personas bloqueadas, descargar mis datos, política de privacidad, contacto y **borrar cuenta** (lo exigen App Store y Google Play).
+- **Centro de notificaciones:** la campana con el contador de no leídos. Cada aviso lleva a su sitio, y hay avisos tipo push cuando llega un mensaje.
+- **Bienvenida de primera vez:** 4 pasos para elegir idioma, presentar la app, indicar tus idiomas y dar permiso para las notificaciones.
+- **Modo oscuro:** automático según el teléfono, o claro u oscuro a mano.
 - **8 idiomas:** svenska, español, English, العربية, فارسی, Türkçe, українська y русский. Árabe y persa se muestran de derecha a izquierda.
 - Se adapta al móvil (pantalla completa) y al escritorio (marco de teléfono).
 

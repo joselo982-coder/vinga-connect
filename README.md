@@ -31,6 +31,22 @@ python -m http.server 8000
 
 Abre `http://localhost:8000`. Para probarlo en el móvil, conéctalo a la misma red wifi y abre `http://<IP-del-ordenador>:8000`.
 
+## Instalar en el móvil (Android)
+
+La maqueta es una **PWA**: lleva `manifest.json`, un service worker (`sw.js`) e iconos (`icon-192.png`, `icon-512.png` y `apple-touch-icon.png`). Chrome puede instalarla como una app con icono propio, que abre a pantalla completa y funciona sin conexión.
+
+Chrome solo instala apps servidas por HTTPS o por `localhost`. Con el móvil conectado por **USB** (depuración USB activada):
+
+```bash
+python -m http.server 8000
+adb reverse tcp:8000 tcp:8000
+```
+
+1. En el móvil, abre Chrome e ingresa `http://localhost:8000`.
+2. Pulsa **⋮ → Instalar app** (o **Añadir a pantalla de inicio**).
+
+Una vez instalada, abre la última copia guardada aunque el ordenador esté apagado. Cuando el servidor vuelve a estar disponible, carga los cambios.
+
 ## Usar en Google Sites
 
 Ve a **Insertar → Insertar → Código insertado** y pega todo el contenido de `index.html`. Si quieres ver el marco de teléfono, usa una altura de unos 860 px.

@@ -6,6 +6,12 @@
 <meta name="theme-color" content="#FAF6EE">
 <meta name="description" content="Vinga Connect – interaktiv prototyp för Vinga Folkhögskola, Frihamnen 15, Göteborg. SJU Solutions.">
 <title>Vinga Connect</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Vinga">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23fff%22/%3E%3Cg%20transform%3D%22translate%28-46.00%2013.59%29%20scale%280.4602%29%22%3E%3Cpath%20d%3D%22M113%2018L171%2030L171%2033L124%2068L122%2066L122%2058L151%2035L115%2028Z%22%20fill%3D%22%23003861%22/%3E%3Cpath%20d%3D%22M214%2012L217%2019L217%2021L188%2044L224%2052L226%2052L226%2061L221%2061L168%2049L168%2047Z%22%20fill%3D%22%23A3D7D6%22/%3E%3C/g%3E%3C/svg%3E">
 <style>
 /* Vinga Connect — playful EdTech look (reference: rounded colour blocks, pill controls, big bold numbers)
@@ -2293,6 +2299,10 @@ function clock(){$('#sbTime').textContent=hhmm(new Date())}
 clock();setInterval(clock,15000);
 setInterval(function(){if(S.logged&&S.tab==='puls'&&!document.hidden){renderDeps();renderToday()}},30000);
 setLang(store.get('vc_lang')||'sv',true);
+/* Installable app: offline copy when served as a PWA (skipped inside Google Sites and file://) */
+if('serviceWorker' in navigator&&window.isSecureContext&&location.protocol!=='file:'&&location.hostname.indexOf('googleusercontent')<0){
+ window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})});
+}
 })();
 </script>
 </body>

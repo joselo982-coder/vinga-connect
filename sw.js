@@ -1,8 +1,8 @@
 /* Vinga Connect – service worker
    Network first (so changes show up), with a cached copy so the
    installed app still opens when the PC/server is not reachable. */
-const CACHE = 'vinga-connect-v1';
-const ASSETS = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
+const CACHE = 'vinga-connect-v2';
+const ASSETS = ['./', './index.html', './manifest.json?v=2', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)));
